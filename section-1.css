@@ -1,0 +1,322 @@
+:root {
+  color-scheme: light;
+  --mjks-editorial-canvas: #f9fcf6;
+  --mjks-editorial-sage: #f4faf1;
+  --mjks-editorial-heading: #315f4b;
+  --mjks-editorial-accent: #e95645;
+  --mjks-editorial-body: #050705;
+  --mjks-editorial-border: rgba(94, 122, 85, 0.2);
+  --mjks-editorial-font-heading: "Libre Baskerville", Georgia, serif;
+  --mjks-editorial-font-ui: "Manrope", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--mjks-editorial-body);
+  background: var(--mjks-editorial-canvas);
+  font-family: var(--mjks-editorial-font-ui);
+}
+
+.mjks-editorial {
+  box-sizing: border-box;
+  padding: 50px 0;
+  background:
+    radial-gradient(ellipse at 14% 18%, rgba(255, 244, 240, 0.6), transparent 38%),
+    linear-gradient(135deg, var(--mjks-editorial-canvas) 0%, var(--mjks-editorial-sage) 62%, #fff8ec 100%);
+}
+
+.mjks-editorial__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 470px;
+  margin-inline: auto;
+  overflow: hidden;
+  padding: 46px 68px;
+  border-radius: 28px;
+  background:
+    linear-gradient(90deg, rgba(249, 252, 246, 0.02) 0%, rgba(249, 252, 246, 0.1) 44%, rgba(249, 252, 246, 0.24) 100%),
+    url("assets/manav-janhit-belief-wide-bg.png") 50% 30% / cover no-repeat,
+    #e8eddf;
+}
+
+.mjks-editorial__inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(249, 252, 246, 0.01) 38%, rgba(249, 252, 246, 0.08) 67%, rgba(249, 252, 246, 0.18) 100%),
+    radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.24), transparent 28%),
+    radial-gradient(circle at 88% 86%, rgba(217, 232, 210, 0.28), transparent 30%);
+  pointer-events: none;
+}
+
+.mjks-editorial__inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(112deg, transparent 0 44%, rgba(255, 255, 255, 0.14) 44% 44.4%, transparent 44.4% 100%),
+    radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.28), transparent 18%);
+  opacity: 0.26;
+  pointer-events: none;
+}
+
+.mjks-editorial__panel {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 500px);
+  overflow: hidden;
+  padding: 34px 36px 70px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 38px;
+  background:
+    radial-gradient(ellipse at 88% 14%, rgba(255, 255, 255, 0.48), transparent 30%),
+    radial-gradient(ellipse at 8% 94%, rgba(233, 86, 69, 0.07), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 248, 236, 0.1) 48%, rgba(244, 250, 241, 0.16) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 16px 18px 42px rgba(255, 255, 255, 0.22),
+    inset -18px -20px 44px rgba(49, 95, 75, 0.07),
+    0 24px 48px rgba(31, 65, 47, 0.28),
+    0 8px 18px rgba(31, 65, 47, 0.18);
+  backdrop-filter: blur(22px) saturate(180%) contrast(1.05);
+  -webkit-backdrop-filter: blur(22px) saturate(180%) contrast(1.05);
+}
+
+.mjks-editorial__panel::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(132deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.14) 20%, transparent 35%),
+    radial-gradient(ellipse at 84% 10%, rgba(255, 255, 255, 0.5), transparent 28%),
+    radial-gradient(ellipse at 18% 84%, rgba(255, 255, 255, 0.16), transparent 32%),
+    linear-gradient(300deg, rgba(255, 255, 255, 0.28) 0%, transparent 22%);
+  opacity: 0.98;
+  pointer-events: none;
+}
+
+.mjks-editorial__panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse at 82% 15%, rgba(255, 255, 255, 0.36) 0 9%, transparent 34%),
+    radial-gradient(ellipse at 50% 118%, rgba(255, 255, 255, 0.18), transparent 42%),
+    linear-gradient(116deg, transparent 0 55%, rgba(255, 255, 255, 0.12) 62%, transparent 72%);
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.mjks-editorial__eyebrow,
+.mjks-editorial__panel h1,
+.mjks-editorial__panel p {
+  position: relative;
+  z-index: 2;
+}
+
+.mjks-editorial__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: var(--mjks-editorial-accent);
+  font-family: var(--mjks-editorial-font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mjks-editorial__eyebrow svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+
+.mjks-editorial__panel h1 {
+  max-width: 23ch;
+  margin: 0;
+  color: var(--mjks-editorial-heading);
+  font-family: var(--mjks-editorial-font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.mjks-editorial__panel h1 span {
+  color: var(--mjks-editorial-accent);
+}
+
+.mjks-editorial__panel p {
+  max-width: 42ch;
+  margin: 22px 0 0;
+  color: #050705;
+  font-family: var(--mjks-editorial-font-ui);
+  font-size: 15.5px;
+  font-weight: 500;
+  line-height: 1.64;
+}
+
+.mjks-editorial__leaf {
+  position: absolute;
+  right: -6px;
+  bottom: -14px;
+  z-index: 1;
+  width: 136px;
+  height: auto;
+  fill: rgba(217, 232, 210, 0.24);
+  stroke: rgba(49, 95, 75, 0.26);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.45;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+@media (max-width: 1199px) {
+  .mjks-editorial {
+    padding: 30px 15px;
+  }
+
+  .mjks-editorial__inner {
+    min-height: 440px;
+    padding: 38px 46px;
+    background-size: cover;
+    background-position: 47% 30%;
+  }
+
+  .mjks-editorial__panel {
+    width: min(100%, 455px);
+    padding: 31px 32px 66px;
+  }
+
+  .mjks-editorial__panel h1 {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 899px) {
+  .mjks-editorial__inner {
+    min-height: 410px;
+    padding: 30px 28px;
+    background-size: cover;
+    background-position: 43% 30%;
+  }
+
+  .mjks-editorial__panel {
+    width: min(100%, 390px);
+    padding: 28px 27px 64px;
+    border-radius: 30px;
+  }
+
+  .mjks-editorial__panel h1 {
+    font-size: 27px;
+  }
+
+  .mjks-editorial__panel p {
+    font-size: 14.5px;
+  }
+
+  .mjks-editorial__leaf {
+    width: 116px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mjks-editorial {
+    padding: 12px 8px 34px;
+  }
+
+  .mjks-editorial__inner {
+    display: block;
+    min-height: 0;
+    padding: 310px 18px 22px;
+    border-radius: 32px;
+    background:
+      linear-gradient(180deg, rgba(249, 252, 246, 0) 0%, rgba(249, 252, 246, 0.04) 48%, rgba(249, 252, 246, 0.5) 78%, rgba(249, 252, 246, 0.78) 100%),
+      url("assets/manav-janhit-hero-elderly-man.png") 50% 0 / 100% auto no-repeat,
+      url("assets/manav-janhit-hero-elderly-man.png") 50% 0 / cover no-repeat,
+      #e8eddf;
+  }
+
+  .mjks-editorial__inner::before {
+    background:
+      linear-gradient(180deg, rgba(249, 252, 246, 0) 0%, rgba(249, 252, 246, 0.08) 42%, rgba(249, 252, 246, 0.72) 100%),
+      radial-gradient(circle at 76% 72%, rgba(217, 232, 210, 0.42), transparent 32%);
+  }
+
+  .mjks-editorial__panel {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+    padding: 28px 24px 66px;
+  }
+
+  .mjks-editorial__eyebrow {
+    font-size: 12px;
+  }
+
+  .mjks-editorial__eyebrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mjks-editorial__panel h1 {
+    font-size: 28px;
+  }
+
+  .mjks-editorial__panel p {
+    font-size: 15px;
+  }
+
+  .mjks-editorial__leaf {
+    width: 104px;
+  }
+}
+
+@media (max-width: 479px) {
+  .mjks-editorial__inner {
+    padding: 288px 14px 18px;
+    background-size: 100% auto;
+    background-position: 50% 0;
+  }
+
+  .mjks-editorial__panel {
+    padding: 26px 20px 62px;
+    border-radius: 26px;
+  }
+
+  .mjks-editorial__panel h1 {
+    font-size: 24px;
+  }
+
+  .mjks-editorial__panel p {
+    font-size: 14.25px;
+  }
+
+  .mjks-editorial__leaf {
+    right: -10px;
+    bottom: -12px;
+    width: 96px;
+  }
+}

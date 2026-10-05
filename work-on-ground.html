@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBFCF6">
+  <title>Our Work — Manav Janhit Kalyan Sansthan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="work-on-ground.css">
+</head>
+<body>
+  <main>
+    <section class="work-ground" aria-labelledby="work-ground-title">
+      <div class="work-ground-inner">
+        <div class="work-ground-head">
+          <div>
+            <p class="eyebrow">Our Work</p>
+            <h2 id="work-ground-title">Work On Ground</h2>
+          </div>
+          <div class="work-controls" aria-label="Work gallery controls">
+            <button class="work-arrow work-prev" type="button" aria-label="Scroll gallery left"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button class="work-arrow work-next" type="button" aria-label="Scroll gallery right"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+        <div class="work-strip" id="work-ground-gallery" aria-label="Our work on the ground">
+          <figure class="work-item"><div class="work-photo"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=520&q=85" alt="Volunteers serving a community meal" loading="lazy"></div><figcaption>Meal Distribution</figcaption></figure>
+          <figure class="work-item"><div class="work-photo"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=520&q=85" alt="Health worker supporting a patient" loading="lazy"></div><figcaption>Healthcare Support</figcaption></figure>
+          <figure class="work-item"><div class="work-photo"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=520&q=85" alt="Senior community member receiving care" loading="lazy"></div><figcaption>Elderly Care</figcaption></figure>
+          <figure class="work-item"><div class="work-photo"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=520&q=85" alt="Children learning together in a classroom" loading="lazy"></div><figcaption>Education Support</figcaption></figure>
+          <figure class="work-item"><div class="work-photo"><img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=520&q=85" alt="Emergency ambulance service" loading="lazy"></div><figcaption>Ambulance Service</figcaption></figure>
+          <figure class="work-item"><div class="work-photo"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=520&q=85" alt="Volunteers connecting with local families" loading="lazy"></div><figcaption>Community Outreach</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const strip = document.querySelector('#work-ground-gallery');
+      const originals = [...strip.children];
+      const before = originals.map(item => item.cloneNode(true));
+      const after = originals.map(item => item.cloneNode(true));
+      strip.prepend(...before);
+      strip.append(...after);
+      strip.classList.add('is-looping');
+
+      const cloneWidth = () => before.reduce((total, item) => total + item.offsetWidth + parseFloat(getComputedStyle(item).marginRight), 0);
+      const jumpTo = position => {
+        const previousBehavior = strip.style.scrollBehavior;
+        strip.style.scrollBehavior = 'auto';
+        strip.scrollLeft = position;
+        strip.style.scrollBehavior = previousBehavior;
+      };
+      const jumpToMiddle = () => jumpTo(cloneWidth());
+      requestAnimationFrame(jumpToMiddle);
+
+      let settleTimer;
+      strip.addEventListener('scroll', () => {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(() => {
+          const sectionWidth = cloneWidth();
+          if (strip.scrollLeft < 1 || strip.scrollLeft >= sectionWidth * 2) jumpTo(sectionWidth);
+        }, 100);
+      }, { passive:true });
+
+      const step = () => strip.querySelector('.work-item').offsetWidth + parseFloat(getComputedStyle(strip.querySelector('.work-item')).marginRight);
+      let autoplayTimer;
+      const startAutoplay = () => {
+        clearTimeout(autoplayTimer);
+        autoplayTimer = setTimeout(() => {
+          strip.scrollBy({ left: step(), behavior: 'smooth' });
+          startAutoplay();
+        }, 2800);
+      };
+      const pauseAutoplay = () => clearTimeout(autoplayTimer);
+      const move = direction => {
+        strip.scrollBy({ left: direction * step(), behavior: 'smooth' });
+        startAutoplay();
+      };
+      document.querySelector('.work-prev').addEventListener('click', () => move(-1));
+      document.querySelector('.work-next').addEventListener('click', () => move(1));
+
+      let pointerStart = 0;
+      let scrollStart = 0;
+      let dragged = false;
+      strip.addEventListener('pointerdown', event => {
+        if (event.pointerType === 'mouse' && event.button !== 0) return;
+        pointerStart = event.clientX;
+        scrollStart = strip.scrollLeft;
+        dragged = false;
+        strip.setPointerCapture(event.pointerId);
+        pauseAutoplay();
+      });
+      strip.addEventListener('pointermove', event => {
+        if (!strip.hasPointerCapture(event.pointerId)) return;
+        const delta = event.clientX - pointerStart;
+        if (Math.abs(delta) > 4) {
+          dragged = true;
+          strip.classList.add('is-dragging');
+          strip.scrollLeft = scrollStart - delta;
+        }
+      });
+      const finishDrag = event => {
+        if (strip.hasPointerCapture(event.pointerId)) strip.releasePointerCapture(event.pointerId);
+        strip.classList.remove('is-dragging');
+        if (dragged) event.preventDefault();
+        startAutoplay();
+      };
+      strip.addEventListener('pointerup', finishDrag);
+      strip.addEventListener('pointercancel', finishDrag);
+      startAutoplay();
+      window.addEventListener('resize', jumpToMiddle);
+    })();
+  </script>
+</body>
+</html>

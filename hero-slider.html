@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero Slider | Manav Janhit Kalyan Sansthan</title>
+  <meta name="description" content="Three-slide hero section for Manav Janhit Kalyan Sansthan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hero-slider.css">
+</head>
+<body>
+  <main>
+    <section class="mjks-hero-slider" aria-roledescription="carousel" aria-label="Manav Janhit hero highlights">
+      <svg class="mjks-hero-slider__defs" aria-hidden="true" focusable="false">
+        <filter id="mjks-slider-liquid" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="2" result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="1.2" result="soft-noise" />
+          <feDisplacementMap in="SourceGraphic" in2="soft-noise" scale="22" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+
+      <div class="mjks-hero-slider__track">
+        <article class="mjks-hero-slide mjks-hero-slide--journey is-active" aria-labelledby="mjks-slide-1-title">
+          <div class="mjks-hero-slide__content">
+            <div class="mjks-hero-slide__eyebrow">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/><path d="M4.2 14.5c2.6 0 3.7 1.9 5.9 1.9 1.6 0 2.6-.8 4-2.2"/></svg>
+              <span>People <b aria-hidden="true">.</b> Care <b aria-hidden="true">.</b> Communities <b aria-hidden="true">.</b> Change</span>
+            </div>
+
+            <h1 class="mjks-hero-slide__title" id="mjks-slide-1-title">
+              Service to Humanity is a <span>Lifetime Journey.</span>
+            </h1>
+
+            <p class="mjks-hero-slide__description">
+              Manav Janhit Kalyan Sansthan supports individuals and families through care, essential aid, education and welfare initiatives.
+            </p>
+
+            <div class="mjks-hero-slide__actions">
+              <a class="mjks-hero-slide__button mjks-hero-slide__button--primary" href="#donate">Donate Now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="mjks-hero-slide__button mjks-hero-slide__button--secondary" href="#about">Learn More</a>
+            </div>
+          </div>
+
+          <div class="mjks-hero-slide__portrait">
+            <figure>
+              <img src="assets/manav-janhit-hero-elderly-man.png" alt="An elderly Indian man looking upward in warm natural light" width="1152" height="1440" fetchpriority="high">
+            </figure>
+            <blockquote>Service to Humanity<br>is a Lifetime Journey.</blockquote>
+          </div>
+        </article>
+
+        <article class="mjks-hero-slide mjks-hero-slide--action" aria-labelledby="mjks-slide-2-title" aria-hidden="true">
+          <header class="mjks-hero-slide__center">
+            <div class="mjks-hero-slide__eyebrow">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/><path d="M4.2 14.5c2.6 0 3.7 1.9 5.9 1.9 1.6 0 2.6-.8 4-2.2"/></svg>
+              <span>Compassion In Action</span>
+            </div>
+
+            <h2 class="mjks-hero-slide__title" id="mjks-slide-2-title">
+              We show up <span>where care is needed.</span>
+            </h2>
+
+            <p class="mjks-hero-slide__description">
+              From elderly care to ambulance support, we work every day for kinder and more dignified communities.
+            </p>
+          </header>
+
+          <div class="mjks-hero-slide__image-strip" aria-label="Our work in action">
+            <figure><img src="assets/community-meal-support.webp" alt="Volunteer serving meals to elderly community members" width="1448" height="1086"></figure>
+            <figure><img src="assets/ambulance-support.webp" alt="Healthcare workers assisting a patient near an ambulance" width="1448" height="1086"></figure>
+            <figure><img src="assets/education-support.webp" alt="Children receiving support during a community education activity" width="1333" height="1000"></figure>
+          </div>
+
+          <aside class="mjks-hero-slide__glass-card">
+            <img src="assets/manav-janhit-logo-official.png" width="165" height="46" alt="Manav Janhit Kalyan Sansthan">
+            <p>Elderly care, healthcare and ambulance support for kinder community welfare.</p>
+            <a href="#our-journey">Discover Our Journey <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </aside>
+        </article>
+
+        <article class="mjks-hero-slide mjks-hero-slide--dignity" aria-labelledby="mjks-slide-3-title" aria-hidden="true">
+          <div class="mjks-hero-slide__collage" aria-label="Stories of care and community support">
+            <figure class="mjks-hero-slide__photo mjks-hero-slide__photo--main"><img src="assets/elderly-woman-care.webp" alt="Care worker helping an elderly woman with a nutritious meal" width="1448" height="1086"></figure>
+            <figure class="mjks-hero-slide__photo mjks-hero-slide__photo--small-one"><img src="assets/community-children.webp" alt="Children learning together in a community activity" width="1448" height="1086"></figure>
+            <figure class="mjks-hero-slide__photo mjks-hero-slide__photo--small-two"><img src="assets/elderly-man.webp" alt="Dignified elderly Indian man smiling" width="1448" height="1086"></figure>
+          </div>
+
+          <div class="mjks-hero-slide__content">
+            <div class="mjks-hero-slide__eyebrow">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 17a4 4 0 0 1-8 0c0-1.1.45-2.1 1.18-2.82L11 7.36l6.82 6.82A4 4 0 0 1 15 21a4 4 0 0 1-4-4Z"/><path d="M11 7.36 8.64 5A3.17 3.17 0 0 0 4.16 9.48L11 16.32"/><path d="m13 9 2.36-2.36a3.17 3.17 0 0 1 4.48 4.48L13 17.96"/></svg>
+              <span>People <b aria-hidden="true">|</b> Care <b aria-hidden="true">|</b> Communities</span>
+            </div>
+
+            <h2 class="mjks-hero-slide__title" id="mjks-slide-3-title">
+              <span>Care is a right.</span> Dignity belongs to all.
+            </h2>
+
+            <p class="mjks-hero-slide__description">
+              We provide meals, healthcare support, shelter, ambulance services and community welfare so every person can live with dignity.
+            </p>
+
+            <div class="mjks-hero-slide__actions">
+              <a class="mjks-hero-slide__button mjks-hero-slide__button--primary" href="#join">Join Our Mission <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="mjks-hero-slide__button mjks-hero-slide__button--secondary" href="#our-work">Discover Our Work</a>
+            </div>
+          </div>
+
+          <aside class="mjks-hero-slide__donation" aria-label="Donation progress">
+            <div>
+              <strong>Support Real Change</strong>
+              <span>78% funded toward the next community care goal.</span>
+            </div>
+            <i><span style="width:78%"></span></i>
+            <a href="#donate">Donate Now</a>
+          </aside>
+        </article>
+      </div>
+
+      <button class="mjks-hero-slider__arrow mjks-hero-slider__arrow--prev" type="button" aria-label="Previous hero slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+      </button>
+
+      <button class="mjks-hero-slider__arrow mjks-hero-slider__arrow--next" type="button" aria-label="Next hero slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+      </button>
+
+      <div class="mjks-hero-slider__dots" aria-label="Hero slide controls">
+        <button type="button" class="is-active" aria-label="Show slide 1" aria-current="true"></button>
+        <button type="button" aria-label="Show slide 2"></button>
+        <button type="button" aria-label="Show slide 3"></button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const root = document.querySelector('.mjks-hero-slider');
+      if (!root) return;
+
+      const slides = Array.from(root.querySelectorAll('.mjks-hero-slide'));
+      const dots = Array.from(root.querySelectorAll('.mjks-hero-slider__dots button'));
+      const prev = root.querySelector('.mjks-hero-slider__arrow--prev');
+      const next = root.querySelector('.mjks-hero-slider__arrow--next');
+      let current = 0;
+      let timer = null;
+
+      const show = (index) => {
+        current = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+          const active = slideIndex === current;
+          slide.classList.toggle('is-active', active);
+          slide.toggleAttribute('aria-hidden', !active);
+        });
+
+        dots.forEach((dot, dotIndex) => {
+          const active = dotIndex === current;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+      };
+
+      const start = () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        stop();
+        timer = window.setInterval(() => show(current + 1), 7000);
+      };
+
+      const stop = () => {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+      };
+
+      prev?.addEventListener('click', () => {
+        show(current - 1);
+        start();
+      });
+
+      next?.addEventListener('click', () => {
+        show(current + 1);
+        start();
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          show(index);
+          start();
+        });
+      });
+
+      root.addEventListener('pointerenter', stop);
+      root.addEventListener('pointerleave', start);
+
+      root.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') show(current - 1);
+        if (event.key === 'ArrowRight') show(current + 1);
+      });
+
+      show(0);
+      start();
+    })();
+  </script>
+</body>
+</html>
