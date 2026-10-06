@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Direction — Mission and Vision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .mjks-direction,.mjks-direction *{box-sizing:border-box}
+    .mjks-direction{--canvas:#f9fcf6;--sage:#315f4b;--coral:#e95645;--body:#45564b;--gold:#e5a648;position:relative;isolation:isolate;width:100%;height:clamp(420px,23.2vw,475px);min-height:0;overflow:hidden;background:var(--canvas);font-family:"Manrope",Arial,sans-serif}
+    .mjks-direction__scene-wrap{position:absolute;top:0;left:21%;z-index:1;width:58%;height:100%;display:block;pointer-events:none}
+    .mjks-direction__scene{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;pointer-events:none;user-select:none}
+    .mjks-direction__hill{position:absolute;left:0;bottom:-2%;z-index:1;width:28%;height:auto;max-height:42%;object-fit:contain;object-position:left bottom;pointer-events:none;user-select:none;opacity:.72}
+    .mjks-direction__inner{position:relative;width:min(100%,1920px);height:100%;margin-inline:auto}
+    .mjks-direction__eyebrow{position:absolute;top:5.2%;left:5.8%;display:inline-flex;align-items:center;gap:11px;color:var(--coral);font-size:clamp(14px,.98vw,19px);line-height:1.35;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .mjks-direction__eyebrow svg{width:clamp(44px,3.15vw,61px);height:auto;flex:0 0 auto;overflow:visible}
+    .mjks-direction__content{position:absolute;z-index:3;color:var(--body)}
+    .mjks-direction__mission{top:22.5%;left:7.1%;width:31.5%}
+    .mjks-direction__vision{top:29.5%;right:3.9%;width:25.5%}
+    .mjks-direction__heading-row{display:flex;align-items:center;gap:clamp(14px,1.25vw,24px);margin-bottom:clamp(13px,1.15vw,22px)}
+    .mjks-direction__content-icon{flex:0 0 auto;color:var(--sage)}
+    .mjks-direction__mission .mjks-direction__content-icon{width:clamp(48px,3.9vw,72px);height:clamp(76px,6.5vw,116px);margin-top:14px}
+    .mjks-direction__vision .mjks-direction__content-icon{width:clamp(65px,5.2vw,96px);height:auto}
+    .mjks-direction__title{margin:0;color:var(--sage);font-family:"Libre Baskerville",Georgia,serif;font-size:clamp(37px,2.65vw,50px);line-height:1.06;font-weight:700;letter-spacing:0}
+    .mjks-direction__text{margin:-8px 0 0 clamp(62px,5.2vw,96px);max-width:370px;color:var(--body);font-size:clamp(17px,1.18vw,22px);line-height:1.62;font-weight:400}
+    .mjks-direction__vision .mjks-direction__text{margin-left:clamp(80px,6.5vw,120px);max-width:390px}
+    .mjks-direction__curve{position:absolute;z-index:2;top:17%;left:22%;width:50%;height:56%;overflow:visible;pointer-events:none}
+    .mjks-direction__curve path{fill:none;stroke:var(--coral);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+    @media(max-width:1279px) and (min-width:1024px){.mjks-direction__mission{left:4.5%;width:34%}.mjks-direction__vision{right:2.5%;width:28%}.mjks-direction__text{font-size:clamp(16px,1.5vw,19px)}.mjks-direction__curve{left:20%;width:50%;height:54%}}
+    @media(max-width:1023px){.mjks-direction{height:auto;min-height:0;overflow:hidden}.mjks-direction__scene-wrap{top:auto;right:0;bottom:0;left:18%;width:64%;height:300px}.mjks-direction__scene{object-fit:contain;object-position:center bottom}.mjks-direction__hill{width:32%;max-height:30%;bottom:0}.mjks-direction__inner{height:590px;min-height:0;padding:28px 20px 310px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto 300px;grid-template-areas:"eyebrow eyebrow" "mission vision" "journey journey";column-gap:28px}.mjks-direction__eyebrow{position:static;grid-area:eyebrow;align-self:start}.mjks-direction__content{position:static;width:auto;align-self:start}.mjks-direction__mission{grid-area:mission}.mjks-direction__vision{grid-area:vision}.mjks-direction__heading-row{gap:12px;margin-bottom:12px}.mjks-direction__mission .mjks-direction__content-icon{width:44px;height:70px;margin-top:0}.mjks-direction__vision .mjks-direction__content-icon{width:60px}.mjks-direction__title{font-size:34px}.mjks-direction__text,.mjks-direction__vision .mjks-direction__text{margin:0;max-width:38ch;font-size:16px;line-height:1.6}.mjks-direction__curve{top:29%;left:18%;width:64%;height:27%}}
+    @media(max-width:767px){.mjks-direction__scene-wrap{top:auto;right:0;bottom:0;left:8%;width:84%;height:285px}.mjks-direction__scene{object-fit:contain;object-position:center bottom}.mjks-direction__hill{width:44%;max-height:24%;bottom:0;opacity:.62}.mjks-direction__inner{height:735px;padding:24px 15px 270px;display:flex;flex-direction:column;gap:0}.mjks-direction__eyebrow{font-size:13px;gap:9px}.mjks-direction__eyebrow svg{width:40px}.mjks-direction__mission{order:2;margin-top:26px}.mjks-direction__vision{order:4;margin-top:16px}.mjks-direction__heading-row{margin-bottom:8px}.mjks-direction__mission .mjks-direction__content-icon{width:40px;height:64px}.mjks-direction__vision .mjks-direction__content-icon{width:55px}.mjks-direction__title{font-size:30px}.mjks-direction__text,.mjks-direction__vision .mjks-direction__text{max-width:90%;font-size:15px;line-height:1.6}.mjks-direction__curve{top:auto;bottom:23%;left:12%;width:76%;height:22%}}
+    @media(max-width:390px){.mjks-direction__scene-wrap{height:270px}.mjks-direction__inner{height:710px;padding-top:22px}.mjks-direction__mission{margin-top:22px}.mjks-direction__vision{margin-top:12px}}
+  </style>
+</head>
+<body style="margin:0;background:#f9fcf6">
+  <main>
+    <section class="mjks-direction" aria-labelledby="mjks-direction-label">
+      <img class="mjks-direction__hill" src="assets/direction-left-hill.webp" alt="" aria-hidden="true">
+      <picture class="mjks-direction__scene-wrap">
+        <source media="(max-width: 767px)" srcset="assets/direction-journey-mobile.webp">
+        <img class="mjks-direction__scene" src="assets/direction-journey-center.webp" alt="" aria-hidden="true">
+      </picture>
+      <div class="mjks-direction__inner">
+        <div class="mjks-direction__eyebrow" id="mjks-direction-label">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="20"/><path d="M32 2v10M32 52v10M2 32h10M52 32h10"/><path d="M32 18l7 14-7 14-7-14 7-14z"/><circle cx="32" cy="32" r="2.3" fill="currentColor" stroke="none"/></g></svg>
+          <span>Our Direction</span>
+        </div>
+        <article class="mjks-direction__content mjks-direction__mission">
+          <div class="mjks-direction__heading-row">
+            <svg class="mjks-direction__content-icon" viewBox="0 0 72 116" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 109V26"/><path d="M36 38C22 37 12 28 11 15c14 0 24 7 25 23z"/><path d="M36 53c14-1 25-10 26-24-14 0-24 8-26 24z"/><path d="M36 72c-13-1-22-9-24-21 13 0 22 7 24 21z"/><path d="M36 92c12-1 21-8 23-19-12 0-21 6-23 19z"/><path d="M27 106l9 8 9-8"/></g></svg>
+            <h2 class="mjks-direction__title">Mission</h2>
+          </div>
+          <p class="mjks-direction__text">To work with communities, understand real needs and turn care into meaningful action.</p>
+        </article>
+        <svg class="mjks-direction__curve" viewBox="0 0 1000 320" preserveAspectRatio="none" aria-hidden="true"><path d="M4 64 C174 8 301 8 400 69 C484 121 507 257 624 286 C731 313 821 262 944 126"/></svg>
+        <article class="mjks-direction__content mjks-direction__vision">
+          <div class="mjks-direction__heading-row">
+            <svg class="mjks-direction__content-icon" viewBox="0 0 100 62" aria-hidden="true"><path d="M4 31C16 13 31 5 50 5s34 8 46 26C84 49 69 57 50 57S16 49 4 31z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><circle cx="50" cy="31" r="14" fill="var(--gold)" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="31" r="5" fill="currentColor"/></svg>
+            <h2 class="mjks-direction__title">Vision</h2>
+          </div>
+          <p class="mjks-direction__text">A society where every person can live with dignity, opportunity and hope.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MJKS Button Variations</title>
+  <style>
+    :root{--sage:#315f4b;--coral:#e95645;--cream:#fffdf7;--ink:#506257}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;padding:40px 20px;background:radial-gradient(circle at 10% 0%,#fff1e9,transparent 35%),linear-gradient(135deg,#fffdf7,#eef5ec);color:var(--ink);font-family:Manrope,Arial,sans-serif}
+    .wrap{width:min(1100px,100%);margin:auto}
+    h1{margin:0;color:var(--sage);font-family:Georgia,serif;font-size:clamp(28px,4vw,48px);text-align:center}
+    .intro{max-width:650px;margin:10px auto 30px;text-align:center;line-height:1.6}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .card{padding:20px;border:1px solid rgba(49,95,75,.12);border-radius:22px;background:rgba(255,255,255,.62);box-shadow:0 14px 35px rgba(49,95,75,.1);text-align:center}
+    .label{display:block;margin-bottom:14px;color:var(--sage);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .mjks-btn{--button-bg:linear-gradient(135deg,#f87566,#e95645);--button-active-bg:linear-gradient(135deg,#c8473b,#8f2f2a);--button-shadow:rgba(233,86,69,.28);position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:min(100%,320px);min-height:58px;padding:7px 56px;border:1px solid rgba(255,255,255,.46);border-radius:999px;color:#fff;background:var(--button-bg);box-shadow:0 13px 25px var(--button-shadow),inset 0 1px rgba(255,255,255,.55),inset 0 -2px rgba(80,30,20,.14);-webkit-backdrop-filter:blur(14px) saturate(138%);backdrop-filter:blur(14px) saturate(138%);font:800 16px/1 Manrope,Arial,sans-serif;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .2s ease,background .42s ease,box-shadow .2s ease}
+    .mjks-btn::after{position:absolute;inset:-55%;content:"";z-index:-1;opacity:.38;background:radial-gradient(circle at 24% 42%,rgba(255,255,255,.7),transparent 19%),radial-gradient(circle at 78% 58%,rgba(255,255,255,.3),transparent 23%);filter:blur(9px);transform:translate3d(-9%,0,0) rotate(-7deg) scale(1.05);animation:mjksLiquid 6s ease-in-out infinite alternate;pointer-events:none}
+    @keyframes mjksLiquid{0%{transform:translate3d(-9%,0,0) rotate(-7deg) scale(1.05)}50%{transform:translate3d(7%,3%,0) rotate(5deg) scale(1.12)}100%{transform:translate3d(-3%,-4%,0) rotate(-2deg) scale(1.08)}}
+    .mjks-btn::before{position:absolute;left:8px;top:7px;width:0;height:44px;content:"";opacity:0;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(255,255,255,.48));pointer-events:none;transition:width .62s cubic-bezier(.22,.61,.36,1),opacity .2s ease}
+    .mjks-btn:hover{transform:translateY(-2px);box-shadow:0 17px 30px var(--button-shadow),inset 0 1px rgba(255,255,255,.6),inset 0 -2px rgba(80,30,20,.14)}
+    .mjks-btn:focus-visible{outline:3px solid rgba(233,86,69,.42);outline-offset:4px}
+    .mjks-btn__icon{position:absolute;left:8px;top:7px;display:grid;width:44px;height:44px;place-items:center;border:3px solid rgba(255,255,255,.86);border-radius:50%;color:var(--sage);background:var(--cream);box-shadow:0 4px 10px rgba(25,55,40,.22),inset 0 1px rgba(255,255,255,.95);contain:paint;backface-visibility:hidden;transition:left .62s cubic-bezier(.22,.61,.36,1),color .25s ease}
+    .mjks-btn__icon svg{width:21px;height:21px;fill:currentColor;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .mjks-btn__text{flex:1;text-align:center;white-space:nowrap}
+    .mjks-btn__arrow{display:none!important}
+    .mjks-btn__arrow svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    .mjks-btn.is-swiped{background:var(--button-active-bg)}
+    .mjks-btn.is-swiped::after{opacity:.5;animation-duration:2.8s}
+    .mjks-btn.is-swiped .mjks-btn__icon{left:calc(100% - 52px);color:var(--coral)}
+    .mjks-btn.is-swiped::before{width:calc(100% - 60px);opacity:1}
+    .mjks-btn.is-reset .mjks-btn__icon{transition:none!important;box-shadow:0 4px 10px rgba(25,55,40,.22),inset 0 1px rgba(255,255,255,.95)}
+    .mjks-btn.is-reset::before{transition:none!important;opacity:0;width:0}
+    .mjks-btn.is-swiped .mjks-btn__text{transform:none}
+    .theme-coral{--button-bg:linear-gradient(135deg,#f87566,#e95645);--button-shadow:rgba(233,86,69,.3)}
+    .theme-sage{--button-bg:linear-gradient(135deg,#4d8367,#315f4b);--button-active-bg:linear-gradient(135deg,#315f4b,#1d3d30);--button-shadow:rgba(49,95,75,.3)}
+    .theme-teal{--button-bg:linear-gradient(135deg,#55b6ad,#227e7c);--button-active-bg:linear-gradient(135deg,#227e7c,#124d4c);--button-shadow:rgba(34,126,124,.28)}
+    .theme-gold{--button-bg:linear-gradient(135deg,#e9bb68,#c88729);--button-active-bg:linear-gradient(135deg,#c88729,#865619);--button-shadow:rgba(190,125,36,.3)}
+    .theme-cream{--button-bg:linear-gradient(135deg,#f9e8c8,#e5b979);--button-active-bg:linear-gradient(135deg,#e5b979,#ad7930);--button-shadow:rgba(175,126,52,.24);color:var(--sage)}
+    .theme-cream .mjks-btn__icon{color:var(--sage)}
+    .theme-plum{--button-bg:linear-gradient(135deg,#8d557d,#56365c);--button-active-bg:linear-gradient(135deg,#56365c,#321f39);--button-shadow:rgba(86,54,92,.3)}
+    @media(max-width:700px){.grid{grid-template-columns:1fr}.card{padding:16px}.mjks-btn{min-width:100%}}
+    @media(prefers-reduced-motion:reduce){.mjks-btn,.mjks-btn__icon,.mjks-btn__text,.mjks-btn__arrow{transition:none!important}.mjks-btn::after{animation:none!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Donate button variations</h1>
+    <p class="intro">Click any button. The circular icon swipes from the left side to the right so you can choose the interaction that fits your hero section.</p>
+    <section class="grid" aria-label="Button variations">
+      <article class="card"><span class="label">01 · Coral glass</span><button class="mjks-btn theme-coral" type="button"><span class="mjks-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20.5S3.5 15.3 3.5 9.2A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 2.6c0 6.1-8.5 11.3-8.5 11.3Z"/></svg></span><span class="mjks-btn__text">Donate Now</span><span class="mjks-btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></article>
+      <article class="card"><span class="label">02 · Sage hand-heart</span><button class="mjks-btn theme-sage" type="button"><span class="mjks-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20.5S3.5 15.3 3.5 9.2A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 2.6c0 6.1-8.5 11.3-8.5 11.3ZM4 16h5l2-2 2 1 3-3 4 4"/></svg></span><span class="mjks-btn__text">Donate Now</span><span class="mjks-btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></article>
+      <article class="card"><span class="label">03 · Teal shield</span><button class="mjks-btn theme-teal" type="button"><span class="mjks-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 3v5c0 4.5-2.8 8.3-7 10-4.2-1.7-7-5.5-7-10V6l7-3Z"/><path fill="none" d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><span class="mjks-btn__text">Donate Now</span><span class="mjks-btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></article>
+      <article class="card"><span class="label">04 · Warm gold leaf</span><button class="mjks-btn theme-gold" type="button"><span class="mjks-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 4C9 4 5 8.5 5 14c0 3 2 5 5 5 5.5 0 9-5 9-15Z"/><path fill="none" d="M5 20c3-5 6-8 11-11"/></svg></span><span class="mjks-btn__text">Donate Now</span><span class="mjks-btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></article>
+      <article class="card"><span class="label">05 · Cream relief</span><button class="mjks-btn theme-cream" type="button"><span class="mjks-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></span><span class="mjks-btn__text">Donate Now</span><span class="mjks-btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></article>
+      <article class="card"><span class="label">06 · Plum community</span><button class="mjks-btn theme-plum" type="button"><span class="mjks-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5.5" cy="10" r="2.2"/><circle cx="18.5" cy="10" r="2.2"/><path d="M6 19c0-3 2.2-5 6-5s6 2 6 5M2.5 18c0-2 1.3-3.5 3.5-3.5M21.5 18c0-2-1.3-3.5-3.5-3.5"/></svg></span><span class="mjks-btn__text">Donate Now</span><span class="mjks-btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></article>
+    </section>
+  </main>
+  <script>
+    const iconCycles = [
+      '<path d="M12 20.5S3.5 15.3 3.5 9.2A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 2.6c0 6.1-8.5 11.3-8.5 11.3Z"/>',
+      '<path d="m12 3 7 3v5c0 4.5-2.8 8.3-7 10-4.2-1.7-7-5.5-7-10V6l7-3Z"/><path fill="none" d="m8.5 12 2.2 2.2 4.8-5"/>',
+      '<path d="M12 20.5S3.5 15.3 3.5 9.2A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 2.6c0 6.1-8.5 11.3-8.5 11.3ZM4 16h5l2-2 2 1 3-3 4 4"/>',
+      '<path d="M19 4C9 4 5 8.5 5 14c0 3 2 5 5 5 5.5 0 9-5 9-15Z"/><path fill="none" d="M5 20c3-5 6-8 11-11"/>',
+      '<path d="M12 3v18M3 12h18"/>',
+      '<circle cx="12" cy="8" r="3"/><circle cx="5.5" cy="10" r="2.2"/><circle cx="18.5" cy="10" r="2.2"/><path d="M6 19c0-3 2.2-5 6-5s6 2 6 5"/>'
+    ];
+    document.querySelectorAll('.mjks-btn').forEach((button)=>button.addEventListener('click',()=>{
+      button.classList.remove('is-swiped');
+      void button.offsetWidth;
+      button.classList.add('is-swiped');
+      const icon = button.querySelector('.mjks-btn__icon svg');
+      const nextIcon = ((Number(button.dataset.iconIndex || 0) + 1) % iconCycles.length);
+      button.dataset.iconIndex = nextIcon;
+      if(icon) icon.innerHTML = iconCycles[nextIcon];
+      window.setTimeout(()=>{
+        button.classList.add('is-reset');
+        button.classList.remove('is-swiped');
+        requestAnimationFrame(()=>button.classList.remove('is-reset'));
+      },1100);
+    }));
+  </script>
+</body>
+</html>
