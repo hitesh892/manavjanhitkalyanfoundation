@@ -349,7 +349,7 @@
   z-index: 3;
   top: 50%;
   right: clamp(24px, 4vw, 64px);
-  width: min(550px, 47%);
+  width: min(620px, 51%);
   padding: 30px 34px;
   border: 1px solid rgba(255, 255, 255, .74);
   border-radius: 16px;
@@ -453,7 +453,7 @@
 .mjks-csr__purpose-grid {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  min-height: 400px;
+  min-height: 330px;
   align-items: center;
   gap: 44px;
 }
@@ -472,7 +472,7 @@
 
 .mjks-csr__purpose-media {
   position: relative;
-  min-height: 340px;
+  min-height: 300px;
 }
 
 .mjks-csr__purpose-photo {
@@ -559,7 +559,7 @@
 .mjks-csr__focus-card > img {
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -617,7 +617,7 @@
 
 .mjks-csr__benefit-grid article {
   min-width: 0;
-  padding: 18px 24px;
+  padding: 14px 22px;
   border-right: 1px solid var(--csr-border);
   text-align: center;
 }
@@ -667,7 +667,7 @@
 .mjks-csr__featured-card {
   display: grid;
   grid-template-columns: minmax(210px, .95fr) minmax(0, 1.05fr);
-  min-height: 190px;
+  min-height: 170px;
   overflow: hidden;
   border: 1px solid rgba(94, 122, 85, .16);
   border-radius: 8px;
@@ -706,8 +706,8 @@
 
 .mjks-csr__featured-card a {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   margin-top: auto;
   border: 1px solid var(--csr-border);
   border-radius: 50%;
@@ -741,7 +741,7 @@
 .mjks-csr__ways-grid {
   display: grid;
   grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr));
-  min-height: 300px;
+  min-height: 260px;
   gap: 0;
   overflow: hidden;
   border-radius: 8px;
@@ -852,7 +852,7 @@
 .mjks-csr__voices-grid {
   display: grid;
   grid-template-columns: 1.2fr .8fr 1.45fr .8fr 1.45fr;
-  min-height: 248px;
+  min-height: 220px;
   align-items: center;
   gap: 22px;
 }
@@ -1082,7 +1082,7 @@
   position: relative;
   min-height: 100%;
   overflow: hidden;
-  min-height: 430px;
+  min-height: 380px;
   border-radius: 0;
   background: #F4FAF1;
   box-shadow: none;
