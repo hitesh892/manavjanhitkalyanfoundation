@@ -1,4 +1,21 @@
-  .mjks-direction,.mjks-direction *{box-sizing:border-box}
+/* STRICTLY HIDE ON TABLET & MOBILE (1023px AND BELOW) */
+@media screen and (max-width: 1023px) {
+    html body .mjks-direction,
+    html body .mjks-direction:hover,
+    html body .mjks-direction:focus {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+    }
+}
+.mjks-direction,.mjks-direction *{box-sizing:border-box}
     .mjks-direction{--canvas:#f9fcf6;--sage:#315f4b;--coral:#e95645;--body:#45564b;--gold:#e5a648;position:relative;isolation:isolate;width:100%;height:clamp(420px,23.2vw,475px);min-height:0;overflow:hidden;background:var(--canvas);font-family:"Manrope",Arial,sans-serif}
     .mjks-direction__scene-wrap{position:absolute;top:0;left:24%;z-index:1;width:56%;height:100%;display:block;pointer-events:none}
     .mjks-direction__scene{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;pointer-events:none;user-select:none}
