@@ -869,3 +869,11 @@
       .mjk-header .mjk-header__donate { min-height: 54px; padding-left: 52px; }
       .mjk-header .mjk-header__donate-arrow { top: 5px; left: 7px; width: 42px; height: 42px; flex-basis: 42px; }
     }
+
+    /* Desktop clearance for the fixed header on internal pages. */
+    @media (min-width: 1101px) {
+      body.mjk-inner-page .mjk-first-section {
+        box-sizing: border-box;
+        padding-top: 150px !important;
+      }
+    }

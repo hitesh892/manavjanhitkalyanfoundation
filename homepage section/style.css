@@ -7142,11 +7142,7 @@ body {
   width:min(390px,74%);
 }
 .mjks-master-hero--two{
-  background-color:#fffcf4;
-  background-image:linear-gradient(to bottom,rgba(255,252,244,0) 62%,rgba(255,252,244,.34) 100%),url("../assets/hero-2-pastel-botanical-waves.png");
-  background-position:center top;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background:none;
 }
 .mjks-master-hero--three{
   background:radial-gradient(circle at 12% 18%,rgba(255,220,212,.32),transparent 31%),radial-gradient(circle at 82% 72%,rgba(217,232,210,.38),transparent 34%),linear-gradient(124deg,#f9fcf6 0%,#f4faf1 61%,#fff4f0 100%);
@@ -7519,7 +7515,6 @@ body {
   }
   .mjks-hero2-gallery{
     margin-top:16px;
-    padding-inline:clamp(54px,5vw,82px);
   }
   .mjks-hero2-gallery__items{
     height:clamp(170px,24vh,250px)!important;
