@@ -491,18 +491,21 @@ When `backdrop-filter` is unsupported, use an opaque `#F7FBF4` surface with the 
 
 ### 6.4 Liquid-Glass Primary Button — LOCKED
 
-The primary button is a coral-red pill with liquid depth, translucent edge, upper gloss, soft inner light, and diffused coral shadow.
+The canonical website button is the approved homepage hero-slider treatment: a coral-red liquid-glass pill with a warm cream circular icon well that travels from left to right on activation. This treatment is inherited by primary CTAs throughout the website unless an approved composition explicitly requires a quieter control.
 
 ```css
---button-primary-bg: linear-gradient(135deg, #F56B5C 0%, #E95645 55%, #D94738 100%);
+--button-primary-bg: linear-gradient(135deg, #F87566, #E95645);
+--button-primary-active-bg: linear-gradient(135deg, #C8473B, #8F2F2A);
 --button-primary-shadow:
-  0 10px 24px rgba(233, 86, 69, 0.28),
-  inset 0 1px 0 rgba(255, 255, 255, 0.48),
-  inset 0 -1px 0 rgba(132, 37, 28, 0.16);
---button-primary-border: rgba(255, 255, 255, 0.44);
+  0 13px 25px rgba(233, 86, 69, 0.28),
+  inset 0 1px rgba(255, 255, 255, 0.55),
+  inset 0 -2px rgba(80, 30, 20, 0.14);
+--button-primary-border: rgba(255, 255, 255, 0.46);
+--button-secondary-bg: linear-gradient(135deg, #4D8367, #315F4B);
+--button-secondary-active-bg: linear-gradient(135deg, #315F4B, #1D3D30);
 ```
 
-The full liquid effect belongs only to buttons and explicitly approved interactive controls. Eyebrows, icons, and highlighted title words share `#E95645` but remain flat and crisp.
+The translucent swipe trail uses `linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.48))`. The icon well uses warm cream `#FFFAF0`, a 3px warm-white rim, sage icon colour, and restrained sage shadow. The full liquid effect belongs only to buttons and explicitly approved interactive controls. Eyebrows, icons, and highlighted title words share `#E95645` but remain flat and crisp.
 
 ---
 
@@ -513,33 +516,106 @@ The full liquid effect belongs only to buttons and explicitly approved interacti
 - Background: `--button-primary-bg`.
 - Text: `#FFFFFF`.
 - Font: Manrope, 700.
-- Height: 52px desktop/tablet, 48px mobile. SYSTEM DEFAULT.
-- Horizontal padding: 24px desktop, 20px mobile. SYSTEM DEFAULT.
+- Minimum height: 58px desktop/tablet, 54px mobile.
+- Horizontal padding: `7px 56px` desktop/tablet, `7px 52px` mobile.
+- Minimum width: 236px where space permits; never exceed the available width.
 - Border radius: `999px`.
 - Border: `1px solid var(--button-primary-border)`.
 - Shadow: `--button-primary-shadow`.
-- Optional trailing arrow inside a 28px translucent circular well.
-- Icon gap: 10px.
+- The icon well starts 8px from the left edge and is 44x44px desktop/tablet or 40x40px mobile.
+- Icon well: `3px solid rgba(255,255,255,0.86)`, `#FFFAF0` background, sage icon, circular radius, and `0 4px 10px rgba(25,55,40,0.22)` shadow.
+- Centre the label independently of the icon so the moving well never changes label alignment.
+- Keep the icon static until the user activates the button. Do not auto-cycle button icons.
 
-### 7.2 Secondary Button — LOCKED DIRECTION
+### 7.2 Secondary Button — LOCKED
 
-- Pale warm glass pill.
-- Sage text `#315F4B`.
-- Green/sage icon inside a light circular well.
-- Same height and radius as the primary button.
-- Border: `1px solid rgba(94, 122, 85, 0.22)`.
-- No coral fill.
+- Use `--button-secondary-bg` with white text for paired hero actions and other approved high-emphasis secondary CTAs.
+- Active background: `--button-secondary-active-bg`.
+- Shadow: `0 13px 25px rgba(49,95,75,0.26), inset 0 1px rgba(255,255,255,0.55), inset 0 -2px rgba(20,55,38,0.18)`.
+- Height, padding, pill radius, icon well, swipe trail, focus treatment, and responsive behaviour match the primary button.
+- A pale warm-glass secondary button remains permitted only in quieter cards, forms, or editorial panels where a filled green action would compete with the primary CTA.
 
-### 7.3 Interaction States — SYSTEM DEFAULT
+### 7.3 Hero-Slider Swipe Interaction — LOCKED
 
-- Hover: translateY(-2px), slightly stronger shadow, 180ms ease-out.
-- Active: translateY(0), reduce shadow by 20%.
-- Keyboard focus: 3px `rgba(233, 86, 69, 0.28)` outer ring plus 2px warm-white separation.
+- Activation adds `.is-swipe-active`: change to the active gradient, reveal the translucent trail, and move the icon well to `left: calc(100% - 52px)`.
+- The trail expands from the left to `calc(100% - 60px)` and remains behind the label.
+- Icon and trail travel duration: `620ms` with `cubic-bezier(.22,.61,.36,1)`.
+- Hold the completed state briefly; reset after 1100ms using `.is-swipe-reset` without a visible reverse animation.
+- The effect runs only on user activation. It must never autoplay, loop continuously, or compete with carousel timing.
+- Navigation links must preserve their destination and must not delay navigation solely to show the animation.
+
+### 7.4 Standard Interaction States — SYSTEM DEFAULT
+
+- Hover: translateY(-2px), slightly stronger shadow, 180-200ms ease-out.
+- Active: translateY(0), use the active gradient, and reduce shadow by approximately 20%.
+- Keyboard focus: visible 2px warm-white outline plus a 5px `rgba(233, 86, 69, 0.28)` outer ring.
 - Disabled: opacity 0.48, no shadow lift, `cursor: not-allowed`.
 - Loading: retain width; replace trailing icon with spinner; never shift label geometry.
 - Touch target: minimum 44x44px.
+- Under `prefers-reduced-motion: reduce`, disable icon/trail travel and show the active colour change immediately.
 
-### 7.4 Text Links
+### 7.5 Canonical CSS Reference — LOCKED
+
+```css
+.button-primary {
+  --button-bg: var(--button-primary-bg);
+  --button-active-bg: var(--button-primary-active-bg);
+  position: relative;
+  display: inline-flex;
+  min-width: 236px;
+  min-height: 58px;
+  padding: 7px 56px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--button-primary-border);
+  border-radius: 999px;
+  color: #FFFFFF;
+  background: var(--button-bg);
+  box-shadow: var(--button-primary-shadow);
+  font: 700 15px/1.2 Manrope, sans-serif;
+  text-decoration: none;
+  transition: transform 200ms ease, background 420ms ease, box-shadow 200ms ease;
+}
+
+.button-primary::before {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 0;
+  height: 44px;
+  content: "";
+  opacity: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,.12), rgba(255,255,255,.48));
+  pointer-events: none;
+  transition: width 620ms cubic-bezier(.22,.61,.36,1), opacity 200ms ease;
+}
+
+.button-primary__icon {
+  position: absolute;
+  z-index: 2;
+  top: 7px;
+  left: 8px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 3px solid rgba(255,255,255,.86);
+  border-radius: 50%;
+  color: #315F4B;
+  background: #FFFAF0;
+  box-shadow: 0 4px 10px rgba(25,55,40,.22), inset 0 1px rgba(255,255,255,.95);
+  transition: left 620ms cubic-bezier(.22,.61,.36,1), color 250ms ease;
+}
+
+.button-primary.is-swipe-active { background: var(--button-active-bg); }
+.button-primary.is-swipe-active::before { width: calc(100% - 60px); opacity: 1; }
+.button-primary.is-swipe-active .button-primary__icon { left: calc(100% - 52px); color: #E95645; }
+```
+
+### 7.6 Text Links
 
 - Default: `#315F4B`, weight 700.
 - Hover: `#E95645`.
@@ -1310,7 +1386,7 @@ Target WCAG 2.2 AA.
 | Body and UI | Manrope, `#45564B` | LOCKED |
 | Eyebrow and icon | Manrope, `#E95645` | LOCKED |
 | Highlighted heading words | `#E95645` | LOCKED |
-| Primary button | Coral liquid-glass pill | LOCKED |
+| Primary button | Hero-slider coral liquid-glass pill with left-to-right cream icon well and activation trail | LOCKED |
 | Glass direction | Light warm sage/ivory glass | LOCKED |
 | Large backgrounds | Light, warm, brand-derived only | LOCKED |
 | Section spacing | `50px 0` desktop; `30px 15px` laptop/tablet/mobile | LOCKED |
@@ -1321,3 +1397,258 @@ Target WCAG 2.2 AA.
 | Imagery | Authentic relevant Indian imagery, no watermark/collage | LOCKED |
 
 All future work must preserve the locked system above. Any proposed deviation must be presented as an explicit change request and must not be silently introduced during implementation.
+
+<!-- Canonical CTA specification updated 2026-10-07. This section overrides any earlier conflicting button rules. -->
+
+## Canonical Liquid CTA Buttons — Strict Rule
+
+Use this single button system for all prominent primary and paired secondary CTAs. Do not create page-specific variations that change its geometry, icon position, typography, depth, or responsive pairing.
+
+### Required component structure
+
+```html
+<div class="mjks-button-group">
+  <a class="mjks-liquid-btn mjks-liquid-btn--primary" href="#target">
+    <span class="mjks-liquid-btn__icon">[SVG icon]</span>
+    <span class="mjks-liquid-btn__label">Primary action</span>
+  </a>
+  <a class="mjks-liquid-btn mjks-liquid-btn--secondary" href="#target-two">
+    <span class="mjks-liquid-btn__icon">[SVG icon]</span>
+    <span class="mjks-liquid-btn__label">Secondary action</span>
+  </a>
+</div>
+```
+
+The icon well must always be the first child and must begin on the left. Never place the icon after the label in this component.
+
+### Paired-button layout
+
+```css
+.mjks-button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 18px;
+}
+```
+
+- Desktop and normal tablet: both CTAs stay on one row.
+- Do not use `width: 100%` on desktop/tablet buttons.
+- Stack only below `540px`, using a `12px` vertical gap and `width: 100%`.
+- Never stack prematurely when both buttons fit cleanly.
+
+### Locked button geometry and typography
+
+```css
+.mjks-liquid-btn {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  min-width: 235px;
+  width: auto;
+  min-height: 58px;
+  height: 58px;
+  padding: 7px 28px 7px 8px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, .46);
+  border-radius: 999px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mjks-liquid-btn__label {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  display: block;
+  padding-inline: 48px;
+  text-align: center;
+}
+```
+
+The label padding is mandatory: it reserves the moving icon’s travel lane and prevents the icon and text from collapsing or overlapping.
+
+### Primary and secondary colors
+
+```css
+.mjks-liquid-btn--primary {
+  --mjks-button-active-bg: linear-gradient(135deg, #c8473b, #8f2f2a);
+  background: linear-gradient(135deg, #f87566 0%, #e95645 100%);
+  box-shadow:
+    0 13px 25px rgba(233, 86, 69, .28),
+    inset 0 1px 0 rgba(255, 255, 255, .55),
+    inset 0 -2px 0 rgba(80, 30, 20, .14);
+}
+
+.mjks-liquid-btn--secondary {
+  --mjks-button-active-bg: linear-gradient(135deg, #315f4b, #1d3d30);
+  background: linear-gradient(135deg, #4d8367 0%, #315f4b 100%);
+  box-shadow:
+    0 13px 25px rgba(49, 95, 75, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .42),
+    inset 0 -2px 0 rgba(20, 65, 48, .14);
+}
+```
+
+A paired high-emphasis secondary CTA must be Sage green. Do not make it white, transparent, outline-only, pale green, or Coral.
+
+### Locked icon well
+
+```css
+.mjks-liquid-btn__icon {
+  position: absolute;
+  z-index: 2;
+  top: 7px;
+  left: 8px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(255, 255, 255, .82);
+  border-radius: 50%;
+  color: #315f4b;
+  background: #fffaf0;
+  box-shadow:
+    0 4px 12px rgba(49, 95, 75, .10),
+    inset 0 1px 0 rgba(255, 255, 255, .90);
+}
+
+.mjks-liquid-btn__icon svg {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+```
+
+Do not use emoji, white icons inside the cream well, or different icon-well sizes between paired buttons.
+
+### Required click animation
+
+The interaction is click-triggered, never autoplayed. The icon travels from left to right over `620ms`, the liquid highlight expands behind it, the active gradient remains visible, and the component resets at `1100ms`.
+
+```css
+.mjks-liquid-btn {
+  transition: transform .2s ease, background .42s ease, box-shadow .2s ease;
+}
+
+.mjks-liquid-btn::before {
+  position: absolute;
+  z-index: 0;
+  top: 7px;
+  left: 8px;
+  width: 0;
+  height: 44px;
+  content: "";
+  opacity: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,.12), rgba(255,255,255,.48));
+  pointer-events: none;
+  transition: width .62s cubic-bezier(.22,.61,.36,1), opacity .2s ease;
+}
+
+.mjks-liquid-btn__icon {
+  transition: left .62s cubic-bezier(.22,.61,.36,1), color .25s ease, transform .42s cubic-bezier(.22,.61,.36,1);
+}
+
+.mjks-liquid-btn.is-swipe-active {
+  background: var(--mjks-button-active-bg);
+}
+
+.mjks-liquid-btn.is-swipe-active::before {
+  width: calc(100% - 60px);
+  opacity: 1;
+}
+
+.mjks-liquid-btn.is-swipe-active .mjks-liquid-btn__icon {
+  left: calc(100% - 52px);
+  color: #e95645;
+}
+
+.mjks-liquid-btn.is-swipe-reset .mjks-liquid-btn__icon {
+  transition: none !important;
+}
+
+.mjks-liquid-btn.is-swipe-reset::before {
+  width: 0;
+  opacity: 0;
+  transition: none !important;
+}
+```
+
+For same-page anchors, prevent the immediate jump, play the full `1100ms` animation, then update the URL hash and smoothly scroll to the destination. Form actions without navigation use the same animation without redirecting.
+
+### Responsive rules
+
+```css
+@media (max-width: 767px) {
+  .mjks-liquid-btn {
+    grid-template-columns: 40px 1fr;
+    min-width: 0;
+    min-height: 54px;
+    height: 54px;
+    padding: 7px 20px 7px 7px;
+  }
+
+  .mjks-liquid-btn__icon {
+    top: 7px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .mjks-liquid-btn.is-swipe-active .mjks-liquid-btn__icon {
+    left: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 540px) {
+  .mjks-button-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .mjks-liquid-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mjks-liquid-btn,
+  .mjks-liquid-btn::before,
+  .mjks-liquid-btn__icon {
+    transition: none !important;
+  }
+}
+```
+
+Reduced-motion users must navigate immediately without waiting for animation.
+
+### Rejection criteria
+
+Reject an implementation if any of the following occurs:
+
+- The icon starts or remains on the right.
+- Icon and label overlap or collapse.
+- Desktop/tablet paired CTAs stack or wrap.
+- Paired buttons have different heights, radii, icon wells, typography, or interaction timing.
+- Secondary paired CTA is white, transparent, outline-only, or Coral.
+- Buttons use `width: 100%` above the small-mobile breakpoint.
+- Navigation happens before the complete `1100ms` animation.
+- Animation autoplays, loops continuously, or changes every button when only one was clicked.
+- Existing sliders, carousels, forms, FAQs, or unrelated controls are affected.

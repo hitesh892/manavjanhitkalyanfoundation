@@ -1,0 +1,310 @@
+.mjks-founder-message,
+    .mjks-founder-message * { box-sizing: border-box; }
+
+    .mjks-founder-message {
+      --canvas: #f9fcf6;
+      --sage-section: #f4faf1;
+      --heading: #315f4b;
+      --accent: #e95645;
+      --body: #45564b;
+      --muted: #728078;
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      padding: 50px 0;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 8% 42%, rgba(232, 180, 121, .17) 0%, rgba(255, 239, 218, .10) 24%, transparent 43%),
+        radial-gradient(ellipse at 52% 32%, rgba(255, 255, 251, .92) 0%, rgba(255, 252, 244, .36) 41%, transparent 68%),
+        radial-gradient(ellipse at 96% 77%, rgba(232, 170, 142, .17) 0%, rgba(255, 240, 229, .10) 26%, transparent 50%),
+        repeating-linear-gradient(97deg, rgba(145, 112, 75, .014) 0 1px, transparent 1px 6px),
+        repeating-linear-gradient(7deg, rgba(145, 112, 75, .010) 0 1px, transparent 1px 9px),
+        linear-gradient(100deg, #fff6e8 0%, #fffaf1 24%, #fffdf8 58%, #fff4e9 100%);
+      color: var(--body);
+      font-family: "Manrope", Arial, sans-serif;
+    }
+
+    .mjks-founder-message::before,
+    .mjks-founder-message::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 210px;
+      height: 270px;
+      border: 0;
+      border-radius: 48% 52% 57% 43%;
+      background:
+        radial-gradient(ellipse at 65% 45%, rgba(217, 232, 210, .30), transparent 58%),
+        radial-gradient(ellipse at 35% 72%, rgba(255, 220, 212, .22), transparent 60%);
+      filter: blur(1px);
+      pointer-events: none;
+    }
+
+    .mjks-founder-message::before { left: -132px; top: -88px; transform: rotate(28deg); }
+    .mjks-founder-message::after { right: -126px; bottom: -112px; transform: rotate(-28deg); }
+
+    .mjks-founder-message__inner {
+      position: relative;
+      width: 100%;
+      max-width: 1280px;
+      min-height: 340px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr) 245px;
+      column-gap: 34px;
+      align-items: start;
+    }
+
+    .mjks-founder-message__portrait {
+      position: relative;
+      width: 292px;
+      margin: 2px 0 18px 12px;
+      transform: rotate(-3.2deg);
+      transform-origin: center;
+      z-index: 2;
+    }
+
+    .mjks-founder-message__photo-frame {
+      padding: 9px;
+      border: 1px solid rgba(255, 255, 255, .92);
+      border-radius: 8px;
+      background: #fffdf8;
+      box-shadow: 0 18px 42px rgba(49, 95, 75, .16), 0 2px 8px rgba(49, 95, 75, .08);
+    }
+
+    .mjks-founder-message__photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 6;
+      border-radius: 4px;
+      object-fit: cover;
+      object-position: 50% 42%;
+    }
+
+    .mjks-founder-message__note {
+      position: absolute;
+      right: -42px;
+      bottom: -25px;
+      width: 214px;
+      padding: 17px 18px 15px;
+      transform: rotate(-5deg);
+      border: 1px solid rgba(185, 107, 50, .12);
+      border-radius: 4px;
+      background:
+        linear-gradient(rgba(255, 248, 236, .96), rgba(255, 248, 236, .96)),
+        repeating-linear-gradient(0deg, transparent 0 5px, rgba(185, 107, 50, .04) 5px 6px);
+      box-shadow: 0 12px 28px rgba(49, 95, 75, .14);
+      color: var(--heading);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 14px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .mjks-founder-message__note span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .mjks-founder-message__note span::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      bottom: -4px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+      transform: rotate(-1deg);
+    }
+
+    .mjks-founder-message__content {
+      min-width: 0;
+      padding-top: 24px;
+    }
+
+    .mjks-founder-message__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .mjks-founder-message__eyebrow svg {
+      width: 23px;
+      height: 23px;
+      flex: 0 0 auto;
+    }
+
+    .mjks-founder-message__title {
+      max-width: 16ch;
+      margin: 0;
+      color: var(--heading);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 40px;
+      line-height: 1.16;
+      font-weight: 700;
+    }
+
+    .mjks-founder-message__title span { color: var(--accent); }
+
+    .mjks-founder-message__text {
+      max-width: 49ch;
+      margin: 18px 0 0;
+      color: var(--body);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .mjks-founder-message__quote {
+      position: relative;
+      z-index: 2;
+      min-width: 0;
+      margin-top: 40px;
+      padding: 24px 22px 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .78);
+      border-radius: 30px 48px 34px 44px / 38px 31px 46px 36px;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255, 255, 255, .88), transparent 34%),
+        radial-gradient(circle at 88% 86%, rgba(233, 86, 69, .11), transparent 40%),
+        linear-gradient(135deg, rgba(255, 255, 255, .62), rgba(244, 250, 241, .43) 52%, rgba(255, 244, 240, .52));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .92),
+        inset -12px -14px 30px rgba(233, 86, 69, .035),
+        0 16px 38px rgba(49, 95, 75, .10);
+      -webkit-backdrop-filter: blur(16px) saturate(118%);
+      backdrop-filter: blur(16px) saturate(118%);
+    }
+
+    .mjks-founder-message__quote::before {
+      content: "";
+      position: absolute;
+      top: -42px;
+      right: -34px;
+      width: 126px;
+      height: 126px;
+      border-radius: 42% 58% 63% 37% / 48% 39% 61% 52%;
+      background: radial-gradient(circle at 34% 30%, rgba(255, 255, 255, .72), rgba(233, 86, 69, .09) 55%, transparent 72%);
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    .mjks-founder-message__quote > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .mjks-founder-message__quote-mark {
+      display: block;
+      height: 31px;
+      margin-bottom: 4px;
+      color: rgba(49, 95, 75, .36);
+      font-family: Georgia, serif;
+      font-size: 48px;
+      line-height: .8;
+    }
+
+    .mjks-founder-message__quote blockquote {
+      margin: 0;
+      color: var(--body);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .mjks-founder-message__quote::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 2px;
+      margin-top: 16px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .mjks-founder-message__art {
+      position: absolute;
+      right: -30px;
+      bottom: -48px;
+      z-index: 0;
+      width: 430px;
+      max-width: 38%;
+      height: auto;
+      opacity: .13;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @media (max-width: 1199px) {
+      .mjks-founder-message { padding: 30px 15px; }
+      .mjks-founder-message__inner {
+        grid-template-columns: 300px minmax(0, 1fr) 220px;
+        gap: 26px;
+      }
+      .mjks-founder-message__portrait { width: 270px; margin-left: 4px; }
+      .mjks-founder-message__title { font-size: 36px; }
+      .mjks-founder-message__text { font-size: 16px; }
+    }
+
+    @media (max-width: 899px) {
+      .mjks-founder-message__inner {
+        min-height: 0;
+        grid-template-columns: minmax(260px, .86fr) minmax(0, 1.14fr);
+        grid-template-areas:
+          "portrait content"
+          "portrait quote";
+        row-gap: 20px;
+      }
+      .mjks-founder-message__portrait { grid-area: portrait; width: min(92%, 295px); }
+      .mjks-founder-message__content { grid-area: content; padding-top: 8px; }
+      .mjks-founder-message__quote { grid-area: quote; margin: 0; max-width: 440px; }
+      .mjks-founder-message__art { right: -60px; bottom: -28px; width: 370px; max-width: 43%; opacity: .1; }
+      .mjks-founder-message__title { font-size: 36px; }
+    }
+
+    @media (max-width: 767px) {
+      .mjks-founder-message__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .mjks-founder-message__content { order: 1; width: 100%; padding: 0; }
+      .mjks-founder-message__portrait {
+        order: 2;
+        align-self: center;
+        width: min(78vw, 315px);
+        margin: 30px 22px 52px 0;
+      }
+      .mjks-founder-message__quote { order: 3; width: min(100%, 480px); margin: 0; padding: 22px 20px 20px; }
+      .mjks-founder-message__eyebrow { margin-bottom: 10px; font-size: 12px; }
+      .mjks-founder-message__title { max-width: 17ch; font-size: 31px; }
+      .mjks-founder-message__text { margin-top: 14px; font-size: 15.5px; }
+      .mjks-founder-message__note { right: -27px; width: 195px; font-size: 13px; }
+      .mjks-founder-message__art {
+        position: relative;
+        order: 4;
+        align-self: flex-end;
+        right: auto;
+        bottom: auto;
+        width: min(88%, 430px);
+        max-width: none;
+        margin: 8px -22px -22px 0;
+        opacity: .1;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .mjks-founder-message__title { font-size: 29px; }
+      .mjks-founder-message__portrait { width: min(82vw, 292px); margin-right: 18px; }
+      .mjks-founder-message__note { right: -21px; width: 178px; padding: 14px 12px 13px; font-size: 12px; }
+      .mjks-founder-message__quote blockquote { font-size: 14px; }
+    }

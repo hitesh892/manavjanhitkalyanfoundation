@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News &amp; Media | Manav Janhit Kalyan Sansthan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/news-media/00-brand/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="news-media.css">
+</head>
+<body class="mjks-news-page">
+  <header class="mjks-news-header">
+    <div class="mjks-news-header__inner">
+      <a class="mjks-news-header__brand" href="" aria-label="Manav Janhit Kalyan Sansthan home"><span class="mjks-brand-mark" aria-hidden="true"><img src="assets/news-media/00-brand/logo-mark.svg" alt=""></span><span class="mjks-brand-copy"><strong>Manav Janhit</strong><span>Kalyan Sansthan</span><small>People Â· Education Â· Health Â· Empowerment</small></span></a>
+      <button class="mjks-news-header__menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="news-primary-nav"><i data-lucide="menu" aria-hidden="true"></i></button>
+      <nav id="news-primary-nav" class="mjks-news-header__nav" aria-label="Primary navigation">
+        <a href="">About Us</a><a href="">What We Do</a><a href="about-us.html#impact">Our Impact</a><a href="">Success Stories</a><a class="is-active" href="" aria-current="page">News &amp; Media</a><a href="index.html#join">Get Involved</a>
+      </nav>
+      <a class="mjks-liquid-btn mjks-liquid-btn--compact" href="index.html#donate" data-delay-link><span class="mjks-liquid-btn__icon"><i data-lucide="heart-handshake" aria-hidden="true"></i></span><span class="mjks-liquid-btn__label">Support Our Work</span></a>
+    </div>
+  </header>
+
+  <main class="mjks-news" id="main-content">
+    <section class="mjks-news-hero" aria-labelledby="news-hero-title">
+      <div class="mjks-news-hero__wash" aria-hidden="true"></div>
+      <div class="mjks-news-hero__inner">
+        <div class="mjks-news-hero__intro">
+          <div class="mjks-eyebrow"><i data-lucide="newspaper" aria-hidden="true"></i><span>News &amp; Media</span></div>
+          <h1 id="news-hero-title">Stories That Travel.<br><span>Work That Gets Recognized.</span></h1>
+          <p>From classrooms to communities, from healthcare camps to livelihood initiatives - explore real stories of change, coverage from the media and the recognition that fuels our mission for a stronger, brighter tomorrow.</p>
+        </div>
+        <picture class="mjks-news-hero__visual">
+          <source media="(max-width: 700px)" srcset="assets/news-media/01-hero/hero-editorial-composite-mobile.webp">
+          <source media="(max-width: 1180px)" srcset="assets/news-media/01-hero/hero-editorial-composite-tablet.webp">
+          <img src="assets/news-media/01-hero/hero-editorial-composite-desktop.webp" alt="A smiling Indian schoolgirl in a blue uniform framed by community newspaper clippings" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="mjks-news-hero__left-clipping" src="assets/news-media/02-chronicle/clipping-rural-children.webp" alt="" aria-hidden="true">
+        <article class="mjks-chronicle" aria-labelledby="chronicle-title">
+          <header class="mjks-chronicle__masthead"><h2>The Community Chronicle</h2><div><span>People</span><span>Education</span><span>Health</span><span>Opportunities</span><span>Vol. 01, 2024</span></div></header>
+          <div class="mjks-chronicle__story">
+            <div class="mjks-chronicle__copy"><h3 id="chronicle-title">Education<br>Brings Brighter<br>Tomorrows</h3><p>Our initiatives in education are opening doors for thousands of children, especially from underserved communities, enabling them to dream bigger and build stronger futures.</p><a class="mjks-editorial-link" href="">Read Full Story <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+            <figure class="mjks-chronicle__image"><img src="assets/news-media/02-chronicle/chronicle-main-education.webp" alt="Indian schoolchildren in blue uniforms representing brighter educational opportunities"><figcaption><i data-lucide="book-open" aria-hidden="true"></i> Education <i data-lucide="arrow-right" aria-hidden="true"></i></figcaption></figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mjks-news-stories" aria-label="Latest news stories"><div class="mjks-section-inner">
+      <div class="mjks-news-tabs" role="tablist" aria-label="News categories">
+        <button class="is-active" type="button" data-filter="all" role="tab" aria-selected="true"><i data-lucide="newspaper" aria-hidden="true"></i><span>All News</span></button>
+        <button type="button" data-filter="education" role="tab" aria-selected="false"><i data-lucide="book-open" aria-hidden="true"></i><span>Education</span></button>
+        <button type="button" data-filter="healthcare" role="tab" aria-selected="false"><i data-lucide="heart-pulse" aria-hidden="true"></i><span>Healthcare</span></button>
+        <button type="button" data-filter="livelihood" role="tab" aria-selected="false"><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i><span>Livelihood</span></button>
+        <button type="button" data-filter="community" role="tab" aria-selected="false"><i data-lucide="users" aria-hidden="true"></i><span>Community</span></button>
+        <button type="button" data-filter="awards" role="tab" aria-selected="false"><i data-lucide="trophy" aria-hidden="true"></i><span>Awards</span></button>
+      </div>
+      <div class="mjks-story-grid" id="news-story-grid">
+        <article class="mjks-lead-story" data-category="education"><img src="assets/news-media/03-news/news-education.webp" alt="A schoolgirl smiling during an education initiative" loading="lazy" decoding="async"><div class="mjks-story-copy"><h2>Rural children find new hope through education support</h2><p>Our education initiatives are helping children from underserved communities gain access to quality learning opportunities.</p><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-12-15">Dec 15, 2024</time><span></span><i data-lucide="book-open" aria-hidden="true"></i>Education</div></div></article>
+        <div class="mjks-supporting-stories">
+          <article class="mjks-supporting-story" data-category="healthcare"><img src="assets/news-media/03-news/news-healthcare.webp" alt="A healthcare worker checking a rural woman's blood pressure" loading="lazy" decoding="async"><div><h3>Mobile health camps bring essential care closer to people</h3><p>From preventive check-ups to awareness sessions, our healthcare camps are making quality care accessible in rural areas.</p><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-12-10">Dec 10, 2024</time><span></span><i data-lucide="heart-pulse" aria-hidden="true"></i>Healthcare</div></div></article>
+          <article class="mjks-supporting-story" data-category="livelihood"><img src="assets/news-media/03-news/news-livelihood.webp" alt="Volunteers serving meals during a community livelihood program" loading="lazy" decoding="async"><div><h3>Skill development creates new opportunities for rural women</h3><p>Livelihood programs are empowering women with skills, confidence and sustainable income opportunities.</p><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-12-05">Dec 05, 2024</time><span></span><i data-lucide="chart-no-axes-column-increasing" aria-hidden="true"></i>Livelihood</div></div></article>
+        </div>
+        <div class="mjks-briefs">
+          <article data-category="education"><img src="assets/news-media/03-news/news-student-award.webp" alt="Students receiving learning materials" loading="lazy" decoding="async"><div><h3>Students excel in district-level competitions</h3><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-11-28">Nov 28, 2024</time></div></div></article>
+          <article data-category="community"><img src="assets/news-media/03-news/news-community.webp" alt="Community outreach team meeting a family" loading="lazy" decoding="async"><div><h3>Community initiative strengthens local support systems</h3><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-11-20">Nov 20, 2024</time></div></div></article>
+          <article data-category="healthcare"><img src="assets/news-media/03-news/news-nutrition.webp" alt="A community nutrition support activity" loading="lazy" decoding="async"><div><h3>Nutrition awareness sessions create healthier villages</h3><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-11-18">Nov 18, 2024</time></div></div></article>
+          <article data-category="community"><img src="assets/news-media/03-news/news-cleanliness.webp" alt="Young volunteers planting a tree" loading="lazy" decoding="async"><div><h3>Youth volunteers lead cleanliness drive in rural areas</h3><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-11-12">Nov 12, 2024</time></div></div></article>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="mjks-press" aria-labelledby="press-title"><div class="mjks-section-inner">
+      <div class="mjks-section-heading mjks-section-heading--press"><div><div class="mjks-eyebrow"><i data-lucide="scan-text" aria-hidden="true"></i><span>In the Press</span></div><h2 id="press-title">Stories Beyond The Headlines</h2></div><p>Discover how our work is covered in print, online and across communities. Real stories. Real impact.</p></div>
+      <picture class="mjks-press-wall">
+        <source media="(max-width: 700px)" srcset="assets/news-media/04-press/press-wall-mobile.webp">
+        <source media="(max-width: 1024px)" srcset="assets/news-media/04-press/press-wall-tablet.webp">
+        <img src="assets/news-media/04-press/press-wall-desktop.webp" alt="Editorial press collage of education, healthcare, community meals and outreach stories" loading="eager" decoding="sync">
+      </picture>
+    </div></section>
+
+    <section class="mjks-media" aria-labelledby="media-title"><div class="mjks-section-inner">
+      <div class="mjks-section-heading mjks-section-heading--media"><div><div class="mjks-eyebrow"><i data-lucide="images" aria-hidden="true"></i><span>Media Gallery</span></div><h2 id="media-title">Moments That Matter</h2></div><p>A glimpse into our on-ground work, community events and impact stories through images and videos.</p><a class="mjks-quiet-link" href="">View Full Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+      <div class="mjks-gallery" aria-label="Community moments gallery"><button class="mjks-gallery__arrow mjks-gallery__arrow--prev" type="button" aria-label="Previous gallery images"><i data-lucide="chevron-left" aria-hidden="true"></i></button><div class="mjks-gallery__track" tabindex="0"><figure><img src="assets/news-media/05-gallery/gallery-01.webp" alt="A mother and child receiving support" loading="lazy" decoding="async"></figure><figure><img src="assets/news-media/05-gallery/gallery-02.webp" alt="Schoolchildren receiving learning materials" loading="lazy" decoding="async"></figure><button class="mjks-gallery__video" type="button" aria-label="Play Education for Brighter Futures video"><img src="assets/news-media/05-gallery/gallery-video.webp" alt="A smiling schoolgirl" loading="lazy" decoding="async"><span class="mjks-gallery__play"><i data-lucide="play" aria-hidden="true"></i></span><span class="mjks-gallery__caption">Education for Brighter Futures <small>02:28</small></span></button><figure><img src="assets/news-media/05-gallery/gallery-03.webp" alt="A community healthcare visit" loading="lazy" decoding="async"></figure><figure><img src="assets/news-media/05-gallery/gallery-04.webp" alt="Community outreach in progress" loading="lazy" decoding="async"></figure><figure><img src="assets/community-meal-support.webp" alt="Community meal support reaching older residents" loading="lazy" decoding="async"></figure></div><button class="mjks-gallery__arrow mjks-gallery__arrow--next" type="button" aria-label="Next gallery images"><i data-lucide="chevron-right" aria-hidden="true"></i></button></div>
+    </div></section>
+
+    <section class="mjks-awards" id="awards" aria-labelledby="awards-title"><div class="mjks-section-inner">
+      <div class="mjks-section-heading mjks-section-heading--awards"><div><div class="mjks-eyebrow"><i data-lucide="trophy" aria-hidden="true"></i><span>Awards &amp; Recognition</span></div><h2 id="awards-title">Honoured For Work That Matters.</h2></div><p>Our collective efforts have been recognized by leading organizations for our contribution to education, healthcare, livelihood and community development.</p></div>
+      <article class="mjks-award-feature" data-category="awards"><img src="assets/news-media/06-awards/award-main.webp" alt="An Indian NGO representative receiving a recognition plaque at a formal event" loading="lazy" decoding="async"><div class="mjks-award-feature__copy"><span class="mjks-badge">Featured</span><h3>Community Service Recognition</h3><p>For our outstanding contribution to rural development and community welfare.</p><div class="mjks-meta"><i data-lucide="calendar-days" aria-hidden="true"></i><time datetime="2024-11-26">Nov 26, 2024</time><span></span>National Social Impact Forum</div></div><div class="mjks-award-seal" aria-hidden="true"><img src="assets/news-media/06-awards/award-medal.svg" alt=""></div></article>
+      <div class="mjks-recognition-heading"><h3>Recognition Wall</h3><a href="#awards">View All Recognition <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+      <div class="mjks-recognition-wall"><article><img src="assets/news-media/06-awards/recognition-01.webp" alt="Neutral education recognition plaque placeholder" loading="lazy" decoding="async"><p>Excellence in Education Initiatives<br><strong>2024</strong></p></article><article><img src="assets/news-media/06-awards/recognition-02.webp" alt="Neutral community health recognition plaque placeholder" loading="lazy" decoding="async"><p>Outstanding Community Health Program<br><strong>2023</strong></p></article><article><img src="assets/news-media/06-awards/recognition-03.webp" alt="Neutral rural livelihood recognition plaque placeholder" loading="lazy" decoding="async"><p>Rural Livelihood Empowerment Award<br><strong>2023</strong></p></article><article><img src="assets/news-media/06-awards/recognition-04.webp" alt="Neutral social impact recognition plaque placeholder" loading="lazy" decoding="async"><p>Social Impact Leadership Award<br><strong>2022</strong></p></article><article><img src="assets/news-media/06-awards/recognition-05.webp" alt="Neutral youth development recognition plaque placeholder" loading="lazy" decoding="async"><p>Youth Development Champion<br><strong>2022</strong></p></article></div>
+    </div></section>
+
+    <section class="mjks-closing" aria-labelledby="closing-title"><div class="mjks-section-inner mjks-closing__inner"><div class="mjks-closing__copy"><h2 id="closing-title">Be Part of More<br>Stories of Change</h2><p>Your support helps us reach more communities, create more opportunities and write many more success stories together.</p></div><a class="mjks-liquid-btn" href="index.html#donate" data-delay-link><span class="mjks-liquid-btn__icon"><i data-lucide="heart-handshake" aria-hidden="true"></i></span><span class="mjks-liquid-btn__label">Support Our Work</span></a><div class="mjks-closing__image"><img src="assets/news-media/07-cta/news-media-final-cta.webp" alt="Schoolchildren representing brighter futures" loading="lazy" decoding="async"><span>Together for Brighter Tomorrows</span></div></div></section>
+  </main>
+
+  <footer class="mjks-news-footer"><div class="mjks-news-footer__top"><a href="" class="mjks-news-footer__brand" aria-label="Manav Janhit Kalyan Sansthan home"><span class="mjks-brand-mark" aria-hidden="true"><img src="assets/news-media/00-brand/logo-mark.svg" alt=""></span><span class="mjks-brand-copy"><strong>Manav Janhit</strong><span>Kalyan Sansthan</span><small>People Â· Education Â· Health Â· Empowerment</small></span></a><nav aria-label="Footer navigation"><a href="">About Us</a><a href="">What We Do</a><a href="">Success Stories</a><a class="is-active" href="">News &amp; Media</a><a href="index.html#join">Get Involved</a><a href="index.html#contact">Contact Us</a></nav><div class="mjks-news-footer__social" aria-label="Social media"><a href="#" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a><a href="#" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a><a href="#" aria-label="YouTube"><i data-lucide="youtube" aria-hidden="true"></i></a><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a></div></div><div class="mjks-news-footer__bottom"><span>&copy; 2024 Manav Janhit Kalyan Sansthan. All rights reserved.</span><span><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></span></div></footer>
+  <script src="assets/lucide.min.js"></script><script src="news-media.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

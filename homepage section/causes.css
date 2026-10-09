@@ -529,7 +529,17 @@ body {
 
 .mjks-cause-card__donate span,
 .mjks-cause-card__donate img { position: relative; z-index: 1; }
-.mjks-cause-card__donate img { width: 17px; height: 17px; filter: brightness(0) invert(1); }
+.mjks-cause-card__donate img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  padding: 14px;
+  border-radius: 50%;
+  background: #fffdf8;
+  filter: none;
+  object-fit: contain;
+}
 
 .mjks-cause-card__donate:hover {
   transform: translateY(-2px);
@@ -660,6 +670,22 @@ body {
   .mjks-cause-card__actions { gap: 4px; }
 }
 
+/* Final cause-card CTA layout: hero-style donate pill, 60/40 row, stable icon. */
+.mjks-cause-card__actions{width:100%;min-width:0;display:flex;align-items:center;flex-wrap:nowrap;gap:8px}
+.mjks-cause-card__donate{position:relative;display:inline-flex;align-items:center;justify-content:flex-start;flex:0 1 60%;width:60%;max-width:60%;min-width:0;height:56px;min-height:56px;padding:6px 12px;gap:10px;overflow:hidden;box-sizing:border-box;border-radius:999px;background:linear-gradient(135deg,#f87566,#e95645 55%,#d94738);color:#fff;font-size:15px;font-weight:800;line-height:1}
+.mjks-cause-card__donate::before{display:none}
+.mjks-cause-card__donate-icon{position:static;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;min-width:40px;min-height:40px;flex:0 0 40px;border:0;border-radius:50%;background:#fff;box-shadow:none;transform:none}
+.mjks-cause-card__donate-icon img{position:static!important;top:auto!important;left:auto!important;display:block;width:19px!important;height:19px!important;min-width:19px!important;min-height:19px!important;padding:0;flex:0 0 19px;filter:brightness(0) saturate(100%) invert(35%) sepia(18%) saturate(879%) hue-rotate(101deg) brightness(91%) contrast(87%)!important;transform:none!important}
+.mjks-cause-card__donate-label{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff}
+.mjks-cause-card__donate.is-swipe-active{background:linear-gradient(135deg,#f87566,#e95645 55%,#d94738)}
+.mjks-cause-card__donate.is-swipe-active img{position:static!important;top:auto!important;left:auto!important;filter:brightness(0) saturate(100%) invert(35%) sepia(18%) saturate(879%) hue-rotate(101deg) brightness(91%) contrast(87%)!important;transform:none!important}
+.mjks-cause-card__socials{display:flex;align-items:center;justify-content:flex-end;flex:1 1 40%;width:40%;min-width:0;flex-wrap:nowrap;gap:8px}
+.mjks-cause-card__socials a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;min-width:42px;min-height:42px;flex:0 0 42px;border-radius:50%;box-sizing:border-box}
+.mjks-cause-card__socials img{width:20px;height:20px}
+@media (max-width:1023px){.mjks-cause-card__actions{gap:6px}.mjks-cause-card__donate{height:52px;min-height:52px;padding:5px 9px;gap:8px;font-size:14px}.mjks-cause-card__donate-icon{width:36px;height:36px;min-width:36px;min-height:36px;flex-basis:36px}.mjks-cause-card__donate-icon img{width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;flex-basis:18px}.mjks-cause-card__socials{gap:6px}.mjks-cause-card__socials a{width:38px;height:38px;min-width:38px;min-height:38px;flex-basis:38px}.mjks-cause-card__socials img{width:19px;height:19px}}
+@media (max-width:767px){.mjks-cause-card__actions{gap:5px}.mjks-cause-card__donate{height:48px;min-height:48px;padding:5px 7px;gap:6px;font-size:13px}.mjks-cause-card__donate-icon{width:32px;height:32px;min-width:32px;min-height:32px;flex-basis:32px}.mjks-cause-card__donate-icon img{width:16px!important;height:16px!important;min-width:16px!important;min-height:16px!important;flex-basis:16px}.mjks-cause-card__socials{gap:5px}.mjks-cause-card__socials a{width:34px;height:34px;min-width:34px;min-height:34px;flex-basis:34px}.mjks-cause-card__socials img{width:17px;height:17px}}
+@media (max-width:359px){.mjks-cause-card__actions{gap:4px}.mjks-cause-card__donate{padding-inline:5px;gap:4px;font-size:12px}.mjks-cause-card__donate-icon{width:29px;height:29px;min-width:29px;min-height:29px;flex-basis:29px}.mjks-cause-card__donate-icon img{width:14px!important;height:14px!important;min-width:14px!important;min-height:14px!important;flex-basis:14px}.mjks-cause-card__socials{gap:3px}.mjks-cause-card__socials a{width:31px;height:31px;min-width:31px;min-height:31px;flex-basis:31px}.mjks-cause-card__socials img{width:15px;height:15px}}
+
 @supports not ((backdrop-filter: blur(4px)) or (-webkit-backdrop-filter: blur(4px))) {
   .mjks-cause-card__panel { background: rgba(247, 251, 244, .94); }
   .mjks-causes__view-all { background: #E95645; }
@@ -672,4 +698,120 @@ body {
     transition: none !important;
     animation: none !important;
   }
+}
+
+/* Strict campaign-card action row: real in-flow icon, flexible donate CTA,
+   fixed social group, and no wrapping at any breakpoint. */
+.mjks-cause-card__actions {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.mjks-cause-card__donate {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+  min-height: 56px;
+  padding: 6px 12px;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.mjks-cause-card__donate-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  position: static;
+  border-radius: 50%;
+  background: #fff;
+}
+.mjks-cause-card__donate-icon img {
+  position: static;
+  width: 19px !important;
+  height: 19px !important;
+  padding: 0;
+  flex: 0 0 19px;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(18%) saturate(879%) hue-rotate(101deg) brightness(91%) contrast(87%) !important;
+  transform: none;
+}
+.mjks-cause-card__donate-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.mjks-cause-card__socials {
+  flex: 0 0 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+.mjks-cause-card__socials a {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mjks-cause-card__socials img {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 767px) {
+  .mjks-cause-card__actions { gap: 7px; }
+  .mjks-cause-card__donate {
+    min-height: 48px;
+    padding: 5px 10px;
+    gap: 7px;
+  }
+  .mjks-cause-card__donate-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    flex-basis: 32px;
+  }
+  .mjks-cause-card__donate-icon img {
+    width: 16px !important;
+    height: 16px !important;
+    flex-basis: 16px;
+  }
+  .mjks-cause-card__donate-label { font-size: 14px; }
+  .mjks-cause-card__socials { gap: 5px; }
+  .mjks-cause-card__socials a {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    flex-basis: 34px;
+  }
+  .mjks-cause-card__socials img { width: 17px; height: 17px; }
+}
+@media (max-width: 359px) {
+  .mjks-cause-card__actions { gap: 5px; }
+  .mjks-cause-card__donate { padding-inline: 7px; gap: 5px; }
+  .mjks-cause-card__donate-icon { width: 30px; height: 30px; min-width: 30px; flex-basis: 30px; }
+  .mjks-cause-card__donate-icon img { width: 15px !important; height: 15px !important; flex-basis: 15px; }
+  .mjks-cause-card__donate-label { font-size: 12px; }
+  .mjks-cause-card__socials { gap: 4px; }
+  .mjks-cause-card__socials a { width: 32px; height: 32px; min-width: 32px; flex-basis: 32px; }
+  .mjks-cause-card__socials img { width: 16px; height: 16px; }
 }

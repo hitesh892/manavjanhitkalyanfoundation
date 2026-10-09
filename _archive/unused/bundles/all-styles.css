@@ -1,0 +1,15 @@
+/* Safe stylesheet entry point. Existing styles remain separate and are loaded in a stable order. */
+@import url("../homepage%20section/header.css");
+@import url("../homepage%20section/style.css");
+@import url("../footer.css");
+@import url("../styles/legal/terms-policy.css");
+
+:root{--mjk-bundle-sage:#315f4b;--mjk-bundle-coral:#e95645;--mjk-bundle-cream:#fffdf8}
+.mjk-bundle-index{min-height:100vh;margin:0;color:var(--mjk-bundle-sage);background:linear-gradient(135deg,#f4fbf3,#fffdf8 52%,#fff2ed);font-family:Manrope,Arial,sans-serif}
+.mjk-bundle-shell{width:min(1120px,calc(100% - 32px));margin:0 auto;padding:clamp(48px,9vw,120px) 0}
+.mjk-bundle-eyebrow{margin:0 0 10px;color:var(--mjk-bundle-coral);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.mjk-bundle-shell h1{margin:0 0 14px;font-family:"Libre Baskerville",Georgia,serif;font-size:clamp(34px,6vw,64px);font-weight:400}
+.mjk-bundle-intro{max-width:680px;margin:0 0 32px;color:#5e6d62;line-height:1.7}
+.mjk-bundle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mjk-bundle-grid a{padding:18px 20px;border:1px solid rgba(49,95,75,.14);border-radius:16px;color:var(--mjk-bundle-sage);font-weight:800;text-decoration:none;background:rgba(255,255,255,.78);box-shadow:0 12px 25px rgba(49,95,75,.06);transition:transform .2s ease,box-shadow .2s ease}
+.mjk-bundle-grid a:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(49,95,75,.12)}

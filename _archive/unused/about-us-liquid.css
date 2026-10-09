@@ -1,0 +1,79 @@
+.mjks-liquid-panel {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .74);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 10% 4%, rgba(255, 255, 255, .76), transparent 30%),
+    radial-gradient(circle at 93% 92%, rgba(233, 86, 69, .09), transparent 34%),
+    rgb(255 255 255 / 55%);
+  box-shadow: 0 14px 40px rgba(49, 95, 75, .10), inset 0 1px 0 rgba(255, 255, 255, .82), inset -14px -16px 30px rgba(244, 250, 241, .22);
+  -webkit-backdrop-filter: blur(10px) saturate(125%);
+  backdrop-filter: blur(10px) saturate(125%);
+}
+
+.mjks-liquid-panel::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -72px;
+  right: -48px;
+  width: 180px;
+  height: 180px;
+  border-radius: 42% 58% 66% 34% / 46% 39% 61% 54%;
+  background: radial-gradient(circle at 34% 28%, rgba(255, 255, 255, .72), transparent 35%), radial-gradient(circle at 63% 66%, rgba(233, 86, 69, .10), transparent 64%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.mjks-liquid-panel::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 8%;
+  bottom: -58px;
+  width: 46%;
+  height: 105px;
+  border-radius: 50%;
+  background: rgba(217, 232, 210, .23);
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.mjk-impact__content.mjks-liquid-panel,
+.mjks-founder__message.mjks-liquid-panel,
+.mjks-founder-message__content.mjks-liquid-panel,
+.mjks-purpose__content.mjks-liquid-panel {
+  padding: 30px 34px;
+}
+
+@media (max-width: 1023px) {
+  .mjks-liquid-panel { border-radius: 15px; }
+  .mjk-impact__content.mjks-liquid-panel,
+  .mjks-founder__message.mjks-liquid-panel,
+  .mjks-founder-message__content.mjks-liquid-panel { padding: 26px 28px; }
+  .mjks-purpose__content.mjks-liquid-panel { padding: 28px 30px; }
+}
+
+@media (max-width: 767px) {
+  .mjks-liquid-panel {
+    border-radius: 14px;
+    -webkit-backdrop-filter: blur(8px) saturate(118%);
+    backdrop-filter: blur(8px) saturate(118%);
+  }
+  .mjk-impact__content.mjks-liquid-panel,
+  .mjks-founder__message.mjks-liquid-panel,
+  .mjks-founder-message__content.mjks-liquid-panel { width: 100%; padding: 22px 20px; }
+  .mjks-purpose__content.mjks-liquid-panel { width: 100%; padding: 330px 22px 24px; }
+}
+
+@media (max-width: 420px) {
+  .mjks-purpose__content.mjks-liquid-panel { padding: 308px 16px 20px; }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .mjks-liquid-panel { background: rgba(255, 255, 255, .90); }
+}
+

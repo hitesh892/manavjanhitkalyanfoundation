@@ -10,3 +10,7 @@
 *.svg
 *.avif
 *.heic
+
+# Keep the approved Dignity Night Pass campaign artwork with its page.
+!assets/dignity-night/
+!assets/dignity-night/*.webp
