@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dignity Night Pass campaign story from Manav Janhit Kalyan Sansthan.">
+  <title>Dignity Night Pass | Manav Janhit Kalyan Sansthan</title>
+  <style>
+    @font-face{font-family:"Libre Baskerville";src:url("../../../blogs-assets/fonts/libre-baskerville-400.ttf") format("truetype");font-weight:400;font-display:swap}
+    @font-face{font-family:"Libre Baskerville";src:url("../../../blogs-assets/fonts/libre-baskerville-700.ttf") format("truetype");font-weight:700;font-display:swap}
+    @font-face{font-family:"Manrope";src:url("../../../blogs-assets/fonts/manrope-400.ttf") format("truetype");font-weight:400;font-display:swap}
+    @font-face{font-family:"Manrope";src:url("../../../blogs-assets/fonts/manrope-600.ttf") format("truetype");font-weight:600;font-display:swap}
+    @font-face{font-family:"Manrope";src:url("../../../blogs-assets/fonts/manrope-700.ttf") format("truetype");font-weight:700;font-display:swap}
+
+    .mjks-dignity{--canvas:#fffdf8;--sage:#315f4b;--body:#45564b;--coral:#e95645;--orange:#f28a2e;--line:rgba(233,86,69,.34);--border:rgba(146,112,69,.18);--cream:#fff9ef;--green:#168a50;position:relative;overflow:hidden;color:var(--body);background:linear-gradient(180deg,#fffdf8 0%,#fffbf4 45%,#fff9f1 100%);font:400 13px/1.38 "Manrope",sans-serif}
+    .mjks-dignity *,.mjks-dignity *::before,.mjks-dignity *::after{box-sizing:border-box}
+    .mjks-dignity h1,.mjks-dignity h2,.mjks-dignity h3,.mjks-dignity p,.mjks-dignity figure,.mjks-dignity blockquote{margin:0}
+    .mjks-dignity img{display:block;width:100%;height:100%;object-fit:cover}
+    .mjks-dignity button{font:inherit}
+    .mjks-dignity :focus-visible{outline:3px solid rgba(233,86,69,.42);outline-offset:3px}
+    .mjks-dignity__inner{width:min(calc(100% - 30px),1280px);margin-inline:auto;padding:24px 0 14px}
+    .mjks-dignity__section{position:relative;margin-top:10px}
+    .mjks-dignity__section:first-child{margin-top:0}
+    .mjks-dignity__section::after{content:"";position:absolute;right:-80px;bottom:-14px;width:230px;height:96px;opacity:.035;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 8px,var(--coral) 9px 10px,transparent 11px 18px);pointer-events:none}
+    .mjks-dignity__heading{display:grid;grid-template-columns:auto auto minmax(32px,1fr);align-items:center;gap:10px;color:var(--sage)}
+    .mjks-dignity__heading h1,.mjks-dignity__heading h2{font-family:"Libre Baskerville",serif;font-weight:700;line-height:1.12;letter-spacing:-.025em}
+    .mjks-dignity__heading h1{font-size:clamp(23px,2.75vw,34px);white-space:nowrap}
+    .mjks-dignity__heading h2{font-size:clamp(23px,2.6vw,32px)}
+    .mjks-dignity__spark{width:10px;height:20px;position:relative;color:var(--orange)}
+    .mjks-dignity__spark::before,.mjks-dignity__spark::after{content:"";position:absolute;left:50%;top:50%;border:1.5px solid currentColor;transform:translate(-50%,-50%) rotate(45deg)}
+    .mjks-dignity__spark::before{width:7px;height:7px}.mjks-dignity__spark::after{width:2px;height:16px;border-width:0 1px}
+    .mjks-dignity__rule{height:1px;background:linear-gradient(90deg,var(--coral),rgba(233,86,69,.08));position:relative}
+    .mjks-dignity__rule::before{content:"";position:absolute;left:-2px;top:50%;width:12px;height:12px;border:1px solid var(--orange);transform:translate(-50%,-50%) rotate(45deg);background:var(--canvas)}
+    .mjks-dignity__intro{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(330px,.92fr);gap:28px;align-items:start}
+    .mjks-dignity__intro-copy p{max-width:58ch;margin:6px 0 0 21px;line-height:1.38}
+    .mjks-dignity__founder{display:grid;grid-template-columns:148px minmax(190px,1fr);align-items:center;margin-top:4px}
+    .mjks-dignity__founder-photo{z-index:1;width:148px;height:148px;border:3px solid #fff;border-radius:50%;box-shadow:0 8px 22px rgba(49,95,75,.14);overflow:hidden}
+    .mjks-dignity__founder-photo img{object-position:50% 42%}
+    .mjks-dignity__quote{min-height:116px;margin-left:-14px;padding:20px 16px 16px 26px;text-align:center;background:linear-gradient(135deg,rgba(255,252,245,.96),rgba(255,247,235,.83));border:1px solid rgba(242,138,46,.24);border-radius:10px 10px 18px 10px;box-shadow:0 7px 18px rgba(132,94,46,.06)}
+    .mjks-dignity__quote blockquote{font-family:"Libre Baskerville",serif;font-size:16px;font-style:italic;line-height:1.5;color:#365669}
+    .mjks-dignity__quote strong{display:block;margin-top:8px;color:var(--sage);font-size:13px}.mjks-dignity__quote span{font-size:12px}
+    .mjks-dignity__timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:10px}
+    .mjks-dignity__timeline-item{min-width:0}.mjks-dignity__timeline-media{aspect-ratio:1.92;overflow:hidden;border-radius:12px;background:#eee6da;box-shadow:0 5px 15px rgba(73,68,53,.07)}
+    .mjks-dignity__timeline-item:nth-child(1) img{object-position:50% 42%}.mjks-dignity__timeline-item:nth-child(2) img{object-position:50% 48%}.mjks-dignity__timeline-item:nth-child(3) img{object-position:50% 52%}.mjks-dignity__timeline-item:nth-child(4) img{object-position:50% 45%}
+    .mjks-dignity__timeline-copy{position:relative;margin-top:6px;padding-left:24px;border-left:1px solid rgba(233,86,69,.14)}
+    .mjks-dignity__dot{position:absolute;left:-6px;top:2px;width:12px;height:12px;border:3px solid #fff;border-radius:50%;background:#ff4f3e;box-shadow:0 0 0 1px rgba(255,79,62,.18)}
+    .mjks-dignity__time{display:block;color:#e64e3f;font-size:12px;font-weight:700}.mjks-dignity__timeline h3,.mjks-dignity__log h3{color:var(--sage);font-family:"Libre Baskerville",serif;font-size:14px;line-height:1.18}.mjks-dignity__timeline p,.mjks-dignity__log p{margin-top:1px;font-size:11.5px;line-height:1.3}
+    .mjks-dignity__sub{margin:2px 0 0 21px;color:#526476;font-size:12.5px}
+    .mjks-dignity__pass{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:10px}
+    .mjks-dignity__pass-card{min-width:0;height:100%;padding:7px 8px 9px;text-align:center;background:linear-gradient(155deg,#fff8eb,#fffaf2);border:1px solid rgba(231,179,119,.25);border-radius:14px;box-shadow:0 5px 14px rgba(117,84,44,.05)}
+    .mjks-dignity__pass-media{aspect-ratio:1.56;overflow:hidden;border-radius:10px}.mjks-dignity__pass-card h3{margin-top:4px;color:var(--sage);font-family:"Libre Baskerville",serif;font-size:14px;line-height:1.15}.mjks-dignity__pass-card p{margin-top:1px;font-size:10.5px;line-height:1.3}
+    .mjks-dignity__proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:10px}
+    .mjks-dignity__proof-card{padding:8px 8px 9px;background:rgba(255,253,248,.86);border:1px solid var(--border);border-radius:12px}
+    .mjks-dignity__proof-media{aspect-ratio:2.2;overflow:hidden;border-radius:8px;background:#eee}.mjks-dignity__proof-card h3{margin-top:4px;color:var(--sage);font-family:"Libre Baskerville",serif;font-size:13px}.mjks-dignity__verified{display:grid;grid-template-columns:16px 1fr;column-gap:5px;align-items:center;margin-top:1px;font-size:10px}.mjks-dignity__verified svg{grid-row:1/3;width:15px;height:15px;color:var(--green)}.mjks-dignity__verified time{color:#68776e}
+    .mjks-dignity__stories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:9px}
+    .mjks-dignity__story{display:grid;grid-template-columns:106px 1fr;grid-template-rows:96px auto;overflow:hidden;background:rgba(255,253,248,.86);border:1px solid var(--border);border-radius:13px}
+    .mjks-dignity__story-photo{height:96px}.mjks-dignity__story-photo img{object-position:50% 30%}.mjks-dignity__story blockquote{padding:7px 8px 3px;color:#485a68;font-size:10.5px;line-height:1.35}.mjks-dignity__story blockquote::before{content:"â€œ";color:var(--coral);font:700 16px/1 serif;margin-right:3px}
+    .mjks-dignity__story-meta{grid-column:1/-1;display:grid;grid-template-columns:106px 1fr;gap:6px;padding:3px 8px 7px}.mjks-dignity__story-person strong{display:block;color:var(--sage);font-family:"Libre Baskerville",serif;font-size:12px}.mjks-dignity__story-person span{font-size:10px}.mjks-dignity__story-location{position:relative;padding-left:19px;font-size:10px;line-height:1.3}.mjks-dignity__story-location svg{position:absolute;left:0;top:1px;width:14px;height:14px;color:#ff4f3e}
+    .mjks-dignity__log{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:9px}.mjks-dignity__log-media{aspect-ratio:2.35;overflow:hidden;border-radius:10px}.mjks-dignity__log-copy{position:relative;padding:5px 0 0 23px}.mjks-dignity__log-copy::before{content:"";position:absolute;left:0;top:8px;width:11px;height:11px;border:3px solid #fff;border-radius:50%;background:#ff4f3e;box-shadow:0 0 0 1px rgba(255,79,62,.18)}
+    .mjks-dignity__supporters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:6px}.mjks-dignity__supporter{display:grid;grid-template-columns:34px 1fr;gap:4px 7px;padding:6px;background:rgba(255,253,248,.9);border:1px solid var(--border);border-radius:10px}.mjks-dignity__avatar{display:grid;place-items:center;width:34px;height:34px;color:#fff;background:#f24d3e;border-radius:50%;font-size:11px;font-weight:700}.mjks-dignity__supporter strong,.mjks-dignity__supporter b,.mjks-dignity__supporter time{display:block}.mjks-dignity__supporter strong{font-size:9.5px;font-weight:600}.mjks-dignity__supporter b{color:#e44938;font-size:12px}.mjks-dignity__supporter time{font-size:9px}.mjks-dignity__supporter p{grid-column:1/-1;position:relative;padding-left:13px;font-size:9.5px;line-height:1.25}.mjks-dignity__supporter p::before{content:"â€œ";position:absolute;left:1px;color:var(--coral);font:700 16px/1 serif}
+    .mjks-dignity__faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 14px;margin-top:4px}.mjks-dignity__faq-item{overflow:hidden;background:rgba(255,253,248,.82);border:1px solid var(--border);border-radius:10px}.mjks-dignity__faq-button{width:100%;min-height:32px;display:grid;grid-template-columns:1fr 24px;align-items:center;gap:8px;padding:2px 7px 2px 13px;color:#516170;text-align:left;background:transparent;border:0;cursor:pointer}.mjks-dignity__faq-icon{position:relative;width:24px;height:24px;border-radius:50%;transition:background-color .2s ease}.mjks-dignity__faq-icon::before,.mjks-dignity__faq-icon::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:#d75227;transform:translate(-50%,-50%);transition:transform .2s ease}.mjks-dignity__faq-icon::after{transform:translate(-50%,-50%) rotate(90deg)}.mjks-dignity__faq-button:hover .mjks-dignity__faq-icon{background:#fff1ed}.mjks-dignity__faq-button[aria-expanded="true"] .mjks-dignity__faq-icon::after{transform:translate(-50%,-50%) rotate(0)}.mjks-dignity__faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .22s ease}.mjks-dignity__faq-button[aria-expanded="true"]+.mjks-dignity__faq-answer{grid-template-rows:1fr}.mjks-dignity__faq-answer>div{min-height:0;overflow:hidden}.mjks-dignity__faq-answer p{padding:0 13px 9px;color:#5f6e65;font-size:10.5px;line-height:1.4}
+    .mjks-dignity__notice{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media (min-width:1025px){
+      .mjks-dignity{font-size:16px}
+      .mjks-dignity__inner{padding:34px 0 38px}
+      .mjks-dignity__section{margin-top:28px}
+      .mjks-dignity__section:first-child{margin-top:0}
+      .mjks-dignity__heading{gap:12px}
+      .mjks-dignity__heading h1,.mjks-dignity__heading h2{font-size:clamp(32px,2.5vw,42px);line-height:1.05;font-weight:700;text-wrap:balance}
+      .mjks-dignity__spark{width:13px;height:24px}
+      .mjks-dignity__rule{height:1.5px}
+      .mjks-dignity__rule::before{width:15px;height:15px;border-width:1.5px}
+      .mjks-dignity__intro{grid-template-columns:minmax(0,1.08fr) minmax(500px,.92fr);gap:32px}
+      .mjks-dignity__intro-copy p{max-width:57ch;margin:12px 0 0 25px;font-size:17px;line-height:1.48}
+      .mjks-dignity__founder{grid-template-columns:230px minmax(260px,1fr);margin-top:0}
+      .mjks-dignity__founder-photo{width:230px;height:230px;border-width:4px;box-shadow:0 14px 30px rgba(49,95,75,.16)}
+      .mjks-dignity__quote{min-height:154px;margin-left:-18px;padding:26px 22px 20px 35px;border-color:rgba(242,138,46,.3);box-shadow:0 12px 28px rgba(132,94,46,.10),inset 0 1px 0 rgba(255,255,255,.85)}
+      .mjks-dignity__quote blockquote{font-size:20px;line-height:1.52}
+      .mjks-dignity__quote strong{margin-top:12px;font-size:15px}.mjks-dignity__quote span{font-size:13px}
+      .mjks-dignity__timeline{gap:18px;margin-top:18px;align-items:stretch}
+      .mjks-dignity__timeline-media{aspect-ratio:1.55;border-radius:13px;box-shadow:0 7px 18px rgba(73,68,53,.10)}
+      .mjks-dignity__timeline-copy{min-height:86px;margin-top:9px;padding-left:28px}
+      .mjks-dignity__dot{left:-7px;width:14px;height:14px}
+      .mjks-dignity__time{font-size:14px}
+      .mjks-dignity__timeline h3,.mjks-dignity__log h3{font-size:18px;line-height:1.2}
+      .mjks-dignity__timeline p,.mjks-dignity__log p{margin-top:3px;font-size:14px;line-height:1.42}
+      .mjks-dignity__sub{margin:6px 0 0 25px;font-size:15px;line-height:1.45}
+      .mjks-dignity__pass{gap:14px;margin-top:15px;align-items:stretch}
+      .mjks-dignity__pass-card{min-height:294px;padding:10px 10px 16px;border-color:rgba(231,179,119,.36);border-radius:15px;box-shadow:0 9px 22px rgba(117,84,44,.09),inset 0 1px 0 rgba(255,255,255,.86)}
+      .mjks-dignity__pass-media{aspect-ratio:4/3}
+      .mjks-dignity__pass-card h3{margin-top:9px;font-size:18px;line-height:1.18}
+      .mjks-dignity__pass-card p{margin-top:4px;font-size:14px;line-height:1.4}
+      .mjks-dignity__proof{gap:14px;margin-top:14px;align-items:stretch}
+      .mjks-dignity__proof-card{padding:10px 10px 12px;border-radius:13px;box-shadow:0 7px 18px rgba(83,66,43,.06)}
+      .mjks-dignity__proof-media{aspect-ratio:2.05}
+      .mjks-dignity__proof-card h3{margin-top:7px;font-size:16px}
+      .mjks-dignity__verified{grid-template-columns:19px 1fr;column-gap:7px;margin-top:3px;font-size:12.5px;line-height:1.38}
+      .mjks-dignity__verified svg{width:18px;height:18px}
+      .mjks-dignity__stories{gap:16px;margin-top:14px;align-items:stretch}
+      .mjks-dignity__story{grid-template-columns:150px 1fr;grid-template-rows:142px auto;min-height:220px;border-radius:14px;box-shadow:0 7px 18px rgba(83,66,43,.06)}
+      .mjks-dignity__story-photo{height:142px}
+      .mjks-dignity__story blockquote{padding:13px 14px 6px;font-size:14px;line-height:1.48}
+      .mjks-dignity__story blockquote::before{font-size:20px}
+      .mjks-dignity__story-meta{grid-template-columns:150px 1fr;gap:10px;padding:7px 12px 12px}
+      .mjks-dignity__story-person strong{font-size:15px}.mjks-dignity__story-person span{font-size:13px}
+      .mjks-dignity__story-location{padding-left:24px;font-size:13px;line-height:1.42}.mjks-dignity__story-location svg{width:18px;height:18px}
+      .mjks-dignity__log{gap:18px;margin-top:14px;align-items:stretch}
+      .mjks-dignity__log-media{aspect-ratio:1.7;border-radius:12px;box-shadow:0 7px 18px rgba(73,68,53,.08)}
+      .mjks-dignity__log-copy{min-height:94px;padding:9px 0 0 28px}
+      .mjks-dignity__log-copy::before{top:13px;width:14px;height:14px}
+      .mjks-dignity__supporters{gap:12px;margin-top:10px;align-items:stretch}
+      .mjks-dignity__supporter{grid-template-columns:44px 1fr;gap:7px 10px;min-height:112px;padding:11px;border-radius:12px;box-shadow:0 6px 16px rgba(83,66,43,.05)}
+      .mjks-dignity__avatar{width:44px;height:44px;font-size:13px}
+      .mjks-dignity__supporter strong{font-size:12px}.mjks-dignity__supporter b{font-size:16px}.mjks-dignity__supporter time{font-size:11px}
+      .mjks-dignity__supporter p{padding-left:16px;font-size:12.5px;line-height:1.38}.mjks-dignity__supporter p::before{font-size:19px}
+      .mjks-dignity__faq{gap:8px 18px;margin-top:12px}
+      .mjks-dignity__faq-button{min-height:48px;grid-template-columns:1fr 34px;padding:7px 10px 7px 17px;font-size:14px}
+      .mjks-dignity__faq-icon{width:32px;height:32px}.mjks-dignity__faq-icon::before,.mjks-dignity__faq-icon::after{width:14px;height:2px}
+      .mjks-dignity__faq-answer p{padding:0 17px 13px;font-size:13px}
+    }
+    @media (max-width:1024px){.mjks-dignity__inner{width:min(100% - 32px,960px)}.mjks-dignity__intro{grid-template-columns:1fr}.mjks-dignity__founder{max-width:520px;margin-inline:auto}.mjks-dignity__timeline,.mjks-dignity__proof,.mjks-dignity__log{grid-template-columns:repeat(2,minmax(0,1fr))}.mjks-dignity__pass{grid-template-columns:repeat(3,minmax(0,1fr))}.mjks-dignity__pass-card:nth-child(n+4){max-width:none}.mjks-dignity__stories{grid-template-columns:1fr}.mjks-dignity__supporters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media (max-width:700px){.mjks-dignity{font-size:14px}.mjks-dignity__inner{width:min(100% - 24px,640px);padding-top:18px}.mjks-dignity__section{margin-top:20px}.mjks-dignity__heading{gap:8px}.mjks-dignity__founder{grid-template-columns:132px 1fr}.mjks-dignity__founder-photo{width:132px;height:132px}.mjks-dignity__pass{grid-template-columns:repeat(2,minmax(0,1fr))}.mjks-dignity__proof{grid-template-columns:repeat(2,minmax(0,1fr))}.mjks-dignity__log{grid-template-columns:repeat(2,minmax(0,1fr))}.mjks-dignity__supporters{grid-template-columns:repeat(2,minmax(0,1fr))}.mjks-dignity__faq{grid-template-columns:1fr}}
+    @media (max-width:480px){.mjks-dignity__heading{grid-template-columns:auto 1fr}.mjks-dignity__rule{display:none}.mjks-dignity__intro-copy p,.mjks-dignity__sub{margin-left:18px}.mjks-dignity__founder{grid-template-columns:1fr;justify-items:center;gap:0}.mjks-dignity__founder-photo{width:150px;height:150px}.mjks-dignity__quote{width:100%;margin:-12px 0 0;padding:24px 16px 15px}.mjks-dignity__timeline,.mjks-dignity__proof,.mjks-dignity__log{grid-template-columns:1fr}.mjks-dignity__timeline-item{display:grid;grid-template-columns:128px 1fr;gap:10px}.mjks-dignity__timeline-copy{margin-top:0}.mjks-dignity__story{grid-template-columns:98px 1fr}.mjks-dignity__story-meta{grid-template-columns:98px 1fr}.mjks-dignity__supporters{grid-template-columns:1fr}}
+    /* Browser-comment corrections and interactive sections */
+    .mjks-dignity__heading{grid-template-columns:auto minmax(40px,1fr);column-gap:20px}
+    .mjks-dignity__heading>.mjks-dignity__spark{display:none}
+    .mjks-dignity__heading h1,.mjks-dignity__heading h2{min-width:0}
+    .mjks-dignity__heading .mjks-dignity__rule{margin-left:8px}
+    .mjks-dignity__pass-card{min-height:0!important;height:auto;display:grid;grid-template-rows:auto 2.4em 4.35em;align-content:start}
+    .mjks-dignity__pass-card h3{height:2.4em;display:grid;place-items:center;margin-bottom:0}
+    .mjks-dignity__pass-card p{height:4.35em;display:grid;place-items:start center;align-content:start;overflow:hidden}
+    .mjks-dignity__timeline-copy,.mjks-dignity__log-copy,.mjks-dignity__supporter{min-height:0!important}
+    .mjks-dignity__story{min-height:0!important;height:auto;grid-template-areas:"photo quote" "meta meta"}
+    .mjks-dignity__story-photo{grid-area:photo}
+    .mjks-dignity__story blockquote{grid-area:quote;height:7.15em;overflow:hidden}
+    .mjks-dignity__story-meta{grid-area:meta}
+    .mjks-dignity__pass-card h3{margin-bottom:5px}
+    .mjks-dignity__story{grid-template-columns:42% 58%;grid-template-rows:auto auto auto;grid-template-areas:"photo quote" "photo person" "photo location";align-items:stretch}
+    .mjks-dignity__story-photo{grid-area:photo;height:100%;min-height:210px}
+    .mjks-dignity__story-photo img{width:100%;height:100%;object-fit:cover}
+    .mjks-dignity__story blockquote{grid-area:quote;height:auto;min-height:0;padding:16px 16px 8px;align-self:stretch}
+    .mjks-dignity__story-meta{display:contents}
+    .mjks-dignity__story-person{grid-area:person;padding:0 16px 4px}
+    .mjks-dignity__story-location{grid-area:location;margin:0;padding:8px 16px 14px 35px;border-top:1px solid rgba(231,179,119,.2)}
+    .mjks-dignity__share-link[data-share="x"] svg{fill:#111}
+    .mjks-dignity__share-link[data-share="facebook"] svg{fill:#1877f2}
+    .mjks-dignity__share-link[data-share="linkedin"] svg{fill:#0a66c2}
+    .mjks-dignity__share-link[data-share="whatsapp"] svg{fill:#25d366}
+    .mjks-dignity__proof-media{width:100%;padding:0;border:0;cursor:zoom-in;background:#eee;text-align:inherit}
+    .mjks-dignity__proof-media:hover img{transform:scale(1.02)}
+    .mjks-dignity__proof-media img{transition:transform .22s ease}
+    .mjks-dignity__carousel-bar{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .mjks-dignity__carousel-bar .mjks-dignity__heading{flex:1}
+    .mjks-dignity__carousel-controls{display:flex;gap:8px;flex:0 0 auto}
+    .mjks-dignity__carousel-button{width:44px;height:44px;display:grid;place-items:center;padding:0;color:var(--sage);background:#fffaf2;border:1px solid rgba(233,86,69,.25);border-radius:50%;cursor:pointer;box-shadow:0 5px 14px rgba(117,84,44,.07);transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+    .mjks-dignity__carousel-button:hover{color:#fff;background:var(--coral);border-color:var(--coral)}
+    .mjks-dignity__carousel-button:disabled{cursor:not-allowed;opacity:.38}
+    .mjks-dignity__carousel-button svg{width:20px;height:20px}
+    .mjks-dignity__supporters-viewport,.mjks-dignity__gallery-viewport{overflow:hidden;margin-top:12px}
+    .mjks-dignity__supporters{display:flex;grid-template-columns:none;gap:12px;margin-top:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-inline:contain}
+    .mjks-dignity__supporters::-webkit-scrollbar,.mjks-dignity__gallery-track::-webkit-scrollbar{display:none}
+    .mjks-dignity__supporter{flex:0 0 calc((100% - 48px)/5);scroll-snap-align:start}
+    .mjks-dignity__gallery-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-inline:contain}
+    .mjks-dignity__gallery-card{flex:0 0 calc((100% - 32px)/3);overflow:hidden;background:#fffaf2;border:1px solid var(--border);border-radius:14px;scroll-snap-align:start;box-shadow:0 8px 20px rgba(83,66,43,.07)}
+    .mjks-dignity__gallery-card figure{aspect-ratio:16/10;overflow:hidden}
+    .mjks-dignity__gallery-card figcaption{padding:11px 13px 13px;color:var(--sage);font-family:"Libre Baskerville",serif;font-weight:700}
+    .mjks-dignity__share{padding:22px;background:linear-gradient(135deg,#fff8ed,#fffdf7);border:1px solid rgba(231,179,119,.3);border-radius:16px;text-align:center;box-shadow:0 8px 22px rgba(117,84,44,.06)}
+    .mjks-dignity__share h2{color:var(--sage);font-family:"Libre Baskerville",serif;font-size:26px;line-height:1.2}
+    .mjks-dignity__share p{margin-top:5px}
+    .mjks-dignity__share-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:16px}
+    .mjks-dignity__share-link{min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;color:var(--sage);background:#fff;border:1px solid rgba(49,95,75,.18);border-radius:999px;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .mjks-dignity__share-link:hover{transform:translateY(-2px);border-color:rgba(233,86,69,.55);box-shadow:0 7px 15px rgba(83,66,43,.08)}
+    .mjks-dignity__share-link svg{width:19px;height:19px;fill:currentColor}
+    .mjks-dignity__share-status{min-height:1.5em;margin-top:8px;color:var(--green);font-size:13px}
+    .mjks-dignity__lightbox{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:28px;background:rgba(24,35,29,.82);backdrop-filter:blur(5px)}
+    .mjks-dignity__lightbox:not([hidden]){display:grid}
+    .mjks-dignity__lightbox-dialog{position:relative;width:min(94vw,1100px);max-height:92vh;display:grid;grid-template-rows:minmax(0,1fr) auto;overflow:hidden;background:#fffdf8;border:1px solid rgba(255,255,255,.5);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+    .mjks-dignity__lightbox-image{max-height:78vh;object-fit:contain;background:#ebe8df}
+    .mjks-dignity__lightbox-caption{padding:14px 60px 16px 18px;color:var(--sage);font-family:"Libre Baskerville",serif;font-size:17px;font-weight:700}
+    .mjks-dignity__lightbox-close{position:absolute;right:12px;top:12px;width:44px;height:44px;display:grid;place-items:center;color:#fff;background:rgba(35,54,45,.82);border:1px solid rgba(255,255,255,.5);border-radius:50%;cursor:pointer}
+    .mjks-dignity__lightbox-close svg{width:22px;height:22px}
+    .mjks-lightbox-open{overflow:hidden}
+    @media (max-width:1024px){.mjks-dignity__heading{column-gap:14px}.mjks-dignity__supporter{flex-basis:calc((100% - 24px)/3)}.mjks-dignity__gallery-card{flex-basis:calc((100% - 16px)/2)}}
+    @media (max-width:700px){.mjks-dignity__heading{column-gap:10px}.mjks-dignity__carousel-bar{align-items:flex-end}.mjks-dignity__supporter{flex-basis:calc((100% - 12px)/2)}.mjks-dignity__gallery-card{flex-basis:82%}.mjks-dignity__story blockquote{height:6.2em}}
+    @media (max-width:480px){.mjks-dignity__heading{grid-template-columns:1fr}.mjks-dignity__heading .mjks-dignity__rule{display:none}.mjks-dignity__carousel-bar{align-items:center}.mjks-dignity__carousel-controls{gap:5px}.mjks-dignity__carousel-button{width:40px;height:40px}.mjks-dignity__supporter{flex-basis:100%}.mjks-dignity__gallery-card{flex-basis:92%}.mjks-dignity__story blockquote{height:7.2em}.mjks-dignity__share{padding:18px 12px}.mjks-dignity__share-link span{display:none}.mjks-dignity__share-link{width:46px;height:46px;justify-content:center;padding:0}.mjks-dignity__lightbox{padding:12px}}
+    @media (max-width:700px){.mjks-dignity__story{grid-template-columns:38% 62%;grid-template-rows:auto auto auto}.mjks-dignity__story-photo{min-height:190px}.mjks-dignity__story blockquote{padding:12px 12px 6px}.mjks-dignity__story-person{padding-inline:12px}.mjks-dignity__story-location{padding:7px 12px 11px 30px}}
+    @media (max-width:480px){.mjks-dignity__story{grid-template-columns:36% 64%}.mjks-dignity__story-photo{min-height:180px}.mjks-dignity__story blockquote{padding:10px 9px 5px;font-size:10px}.mjks-dignity__story-person{padding-inline:9px}.mjks-dignity__story-location{padding-left:27px;padding-right:9px}}
+    @media (prefers-reduced-motion:reduce){.mjks-dignity *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body style="margin:0;background:#f9fcf6">
+  <main class="mjks-dignity" aria-label="Dignity Night Pass campaign story">
+    <div class="mjks-dignity__inner">
+      <section class="mjks-dignity__section" aria-labelledby="night-title">
+        <div class="mjks-dignity__intro">
+          <div class="mjks-dignity__intro-copy">
+            <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h1 id="night-title">The night we decided to start</h1><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+            <p>On a cold winter night, our team found elderly people, workers and families sleeping on footpaths, outside stations and in bus stands â€” without food, without blankets, without a safe place to be.</p>
+          </div>
+          <div class="mjks-dignity__founder">
+            <figure class="mjks-dignity__founder-photo"><img src="../../../assets/dignity-night/founder-rajesh.webp" alt="Rajesh Kumar, founder member"></figure>
+            <div class="mjks-dignity__quote"><blockquote>Dignity is a basic right, not a privilege.</blockquote><strong>Rajesh Kumar</strong><span>Founder Member</span></div>
+          </div>
+        </div>
+        <div class="mjks-dignity__timeline" aria-label="The night in four steps">
+          <article class="mjks-dignity__timeline-item"><div class="mjks-dignity__timeline-media"><img src="../../../assets/dignity-night/timeline-outreach.webp" alt="Volunteer taking an outreach call"></div><div class="mjks-dignity__timeline-copy"><span class="mjks-dignity__dot" aria-hidden="true"></span><time class="mjks-dignity__time">8:30 PM</time><h3>Outreach call</h3><p>We receive a call about people in need.</p></div></article>
+          <article class="mjks-dignity__timeline-item"><div class="mjks-dignity__timeline-media"><img src="../../../assets/dignity-night/timeline-hot-meal.webp" alt="Older guest eating a hot meal"></div><div class="mjks-dignity__timeline-copy"><span class="mjks-dignity__dot" aria-hidden="true"></span><time class="mjks-dignity__time">9:15 PM</time><h3>Hot meal served</h3><p>Nutritious dinner at our shelter.</p></div></article>
+          <article class="mjks-dignity__timeline-item"><div class="mjks-dignity__timeline-media"><img src="../../../assets/dignity-night/timeline-shelter-checkin.webp" alt="Clean shelter beds prepared with blankets"></div><div class="mjks-dignity__timeline-copy"><span class="mjks-dignity__dot" aria-hidden="true"></span><time class="mjks-dignity__time">10:00 PM</time><h3>Shelter check-in</h3><p>Safe beds, blankets and hygiene kits.</p></div></article>
+          <article class="mjks-dignity__timeline-item"><div class="mjks-dignity__timeline-media"><img src="../../../assets/dignity-night/timeline-breakfast-followup.webp" alt="Volunteer offering breakfast and follow-up support"></div><div class="mjks-dignity__timeline-copy"><span class="mjks-dignity__dot" aria-hidden="true"></span><time class="mjks-dignity__time">7:00 AM</time><h3>Breakfast &amp; follow-up</h3><p>Morning tea, food and support for next steps.</p></div></article>
+        </div>
+      </section>
+
+      <section class="mjks-dignity__section" aria-labelledby="pass-title">
+        <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h2 id="pass-title">What your Dignity Night Pass includes</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+        <p class="mjks-dignity__sub">More than just a meal or a bed â€” itâ€™s safety, care and a chance for a better tomorrow.</p>
+        <div class="mjks-dignity__pass">
+          <article class="mjks-dignity__pass-card"><div class="mjks-dignity__pass-media"><img src="../../../assets/dignity-night/pass-hot-dinner.webp" alt="A fresh Indian dinner platter"></div><h3>Hot<br>Dinner</h3><p>Fresh, nutritious dinner cooked and served with care.</p></article>
+          <article class="mjks-dignity__pass-card"><div class="mjks-dignity__pass-media"><img src="../../../assets/dignity-night/pass-safe-bed.webp" alt="Folded clean blankets and bedding"></div><h3>Safe<br>Bed</h3><p>A clean bed and warm blanket in a secure shelter.</p></article>
+          <article class="mjks-dignity__pass-card"><div class="mjks-dignity__pass-media"><img src="../../../assets/dignity-night/pass-hygiene-kit.webp" alt="Soap, toothbrush, towel and hygiene essentials"></div><h3>Hygiene<br>Kit</h3><p>Soap, toothbrush, towel and essential hygiene supplies.</p></article>
+          <article class="mjks-dignity__pass-card"><div class="mjks-dignity__pass-media"><img src="../../../assets/dignity-night/pass-breakfast.webp" alt="Morning tea and breakfast"></div><h3>Morning Tea<br>&amp; Breakfast</h3><p>Warm tea and breakfast for a fresh, nourishing start.</p></article>
+          <article class="mjks-dignity__pass-card"><div class="mjks-dignity__pass-media"><img src="../../../assets/dignity-night/pass-followup.webp" alt="Volunteers providing follow-up support"></div><h3>Follow-up<br>Support</h3><p>Guidance for healthcare, ID support and next steps.</p></article>
+        </div>
+      </section>
+
+      <section class="mjks-dignity__section" aria-labelledby="verified-title">
+        <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h2 id="verified-title">Verified before asking</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+        <p class="mjks-dignity__sub">We believe in complete transparency. Here are real documents and field photos from our ongoing shelter program.</p>
+        <p class="mjks-dignity__notice">Document thumbnails are reproduced from the approved campaign artwork and should be replaced with source records before publication.</p>
+        <div class="mjks-dignity__proof">
+          <article class="mjks-dignity__proof-card"><button class="mjks-dignity__proof-media" type="button" data-lightbox-src="../../../assets/dignity-night/proof-shelter-register.webp" data-lightbox-caption="Shelter Register" aria-label="Open Shelter Register in lightbox"><img src="../../../assets/dignity-night/proof-shelter-register.webp" alt="Shelter register thumbnail from approved campaign artwork"></button><h3>Shelter Register</h3><div class="mjks-dignity__verified"><svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="9"/><path d="m6 10 2.4 2.4L14.5 6.8" fill="none" stroke="white" stroke-width="2"/></svg><span>Verified Document</span><time datetime="2024-01-12">12 Jan 2024</time></div></article>
+          <article class="mjks-dignity__proof-card"><button class="mjks-dignity__proof-media" type="button" data-lightbox-src="../../../assets/dignity-night/proof-food-bill.webp" data-lightbox-caption="Food Purchase Bill" aria-label="Open Food Purchase Bill in lightbox"><img src="../../../assets/dignity-night/proof-food-bill.webp" alt="Food purchase bill thumbnail from approved campaign artwork"></button><h3>Food Purchase Bill</h3><div class="mjks-dignity__verified"><svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="9"/><path d="m6 10 2.4 2.4L14.5 6.8" fill="none" stroke="white" stroke-width="2"/></svg><span>Verified Document</span><time datetime="2024-01-10">10 Jan 2024</time></div></article>
+          <article class="mjks-dignity__proof-card"><button class="mjks-dignity__proof-media" type="button" data-lightbox-src="../../../assets/dignity-night/proof-volunteer-attendance.webp" data-lightbox-caption="Volunteer Attendance" aria-label="Open Volunteer Attendance in lightbox"><img src="../../../assets/dignity-night/proof-volunteer-attendance.webp" alt="Volunteer attendance thumbnail from approved campaign artwork"></button><h3>Volunteer Attendance</h3><div class="mjks-dignity__verified"><svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="9"/><path d="m6 10 2.4 2.4L14.5 6.8" fill="none" stroke="white" stroke-width="2"/></svg><span>Verified Document</span><time datetime="2024-01-15">15 Jan 2024</time></div></article>
+          <article class="mjks-dignity__proof-card"><button class="mjks-dignity__proof-media" type="button" data-lightbox-src="../../../assets/dignity-night/proof-field-photo.webp" data-lightbox-caption="Field Photo" aria-label="Open Field Photo in lightbox"><img src="../../../assets/dignity-night/proof-field-photo.webp" alt="Shelter team field photo"></button><h3>Field Photo</h3><div class="mjks-dignity__verified"><svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="9"/><path d="m6 10 2.4 2.4L14.5 6.8" fill="none" stroke="white" stroke-width="2"/></svg><span>Verified by Team</span><time datetime="2024-01-14">14 Jan 2024</time></div></article>
+        </div>
+      </section>
+
+      <section class="mjks-dignity__section" aria-labelledby="stories-title">
+        <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h2 id="stories-title">Stories from the shelter</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+        <p class="mjks-dignity__sub">Real people. Real journeys. Real change â€” made possible by your support.</p>
+        <div class="mjks-dignity__stories">
+          <article class="mjks-dignity__story"><div class="mjks-dignity__story-photo"><img src="../../../assets/dignity-night/story-rameshji.webp" alt="Portrait of Rameshji"></div><blockquote>After two days without a proper meal, I received food, a warm blanket and respect.</blockquote><div class="mjks-dignity__story-meta"><div class="mjks-dignity__story-person"><strong>Rameshji, 62</strong><span>Daily Wage Worker</span></div><p class="mjks-dignity__story-location"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Found near Railway Station<br>Now visits our shelter regularly.</p></div></article>
+          <article class="mjks-dignity__story"><div class="mjks-dignity__story-photo"><img src="../../../assets/dignity-night/story-savitri.webp" alt="Portrait of Savitri Devi"></div><blockquote>The shelter gave me safety, warm food and the chance to recover with dignity and care.</blockquote><div class="mjks-dignity__story-meta"><div class="mjks-dignity__story-person"><strong>Savitri Devi, 68</strong><span>Widow</span></div><p class="mjks-dignity__story-location"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Found at a bus stand<br>Now safe, warm and accessing health check-ups.</p></div></article>
+          <article class="mjks-dignity__story"><div class="mjks-dignity__story-photo"><img src="../../../assets/dignity-night/story-imran.webp" alt="Portrait of Imran"></div><blockquote>After losing work, the shelter gave me food, a bed and guidance to begin finding work again.</blockquote><div class="mjks-dignity__story-meta"><div class="mjks-dignity__story-person"><strong>Imran, 28</strong><span>Migrant Worker</span></div><p class="mjks-dignity__story-location"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Found near construction site<br>Now receiving job assistance and regular meals.</p></div></article>
+        </div>
+      </section>
+
+      <section class="mjks-dignity__section" aria-labelledby="log-title">
+        <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h2 id="log-title">Live shelter log</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+        <p class="mjks-dignity__sub">A glimpse into our recent work. Your support makes each night possible.</p>
+        <div class="mjks-dignity__log">
+          <article><div class="mjks-dignity__log-media"><img src="../../../assets/dignity-night/log-rescue.webp" alt="Shelter rescue and pickup vehicle"></div><div class="mjks-dignity__log-copy"><time class="mjks-dignity__time">12 Jan, 8:05 PM</time><h3>Rescue &amp; pick-up</h3><p>3 people brought to shelter from railway station.</p></div></article>
+          <article><div class="mjks-dignity__log-media"><img src="../../../assets/dignity-night/log-dinner.webp" alt="Volunteers serving dinner"></div><div class="mjks-dignity__log-copy"><time class="mjks-dignity__time">12 Jan, 9:40 PM</time><h3>Dinner served</h3><p>50 meals served tonight.</p></div></article>
+          <article><div class="mjks-dignity__log-media"><img src="../../../assets/dignity-night/log-checkin.webp" alt="Beds arranged for shelter check-in"></div><div class="mjks-dignity__log-copy"><time class="mjks-dignity__time">12 Jan, 10:15 PM</time><h3>Shelter check-in</h3><p>Beds and blankets arranged for 32 people.</p></div></article>
+          <article><div class="mjks-dignity__log-media"><img src="../../../assets/dignity-night/log-morning.webp" alt="Guests enjoying morning tea and breakfast"></div><div class="mjks-dignity__log-copy"><time class="mjks-dignity__time">13 Jan, 7:00 AM</time><h3>Morning tea</h3><p>Tea and breakfast served. Follow-up support provided.</p></div></article>
+        </div>
+      </section>
+
+      <section class="mjks-dignity__section" aria-labelledby="supporters-title">
+        <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h2 id="supporters-title">Recent supporters</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+        <p class="mjks-dignity__sub">Compassionate people like you are lighting up lives every night.</p>
+        <p class="mjks-dignity__notice">Supporter profiles are illustrative content from the approved campaign artwork.</p>
+        <div class="mjks-dignity__supporters">
+          <article class="mjks-dignity__supporter"><span class="mjks-dignity__avatar">AS</span><div><strong>Anjali Sharma</strong><b>â‚¹1,100</b><time>2 hours ago</time></div><p>Proud to support dignity for all.</p></article>
+          <article class="mjks-dignity__supporter"><span class="mjks-dignity__avatar">RK</span><div><strong>Rohit Kumar</strong><b>â‚¹700</b><time>6 hours ago</time></div><p>Small step for a brighter tomorrow.</p></article>
+          <article class="mjks-dignity__supporter"><span class="mjks-dignity__avatar">MP</span><div><strong>Meera Patel</strong><b>â‚¹2,500</b><time>1 day ago</time></div><p>Everyone deserves a safe night.</p></article>
+          <article class="mjks-dignity__supporter"><span class="mjks-dignity__avatar">VK</span><div><strong>Vikram Singh</strong><b>â‚¹1,100</b><time>2 days ago</time></div><p>Keep up the beautiful work.</p></article>
+          <article class="mjks-dignity__supporter"><span class="mjks-dignity__avatar">SN</span><div><strong>Sneha Nair</strong><b>â‚¹500</b><time>3 days ago</time></div><p>Food, shelter and hope change lives.</p></article>
+        </div>
+      </section>
+
+      <section class="mjks-dignity__section" aria-labelledby="faq-title">
+        <div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true"></span><h2 id="faq-title">Frequently Asked Questions</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div>
+        <div class="mjks-dignity__faq">
+          <div>
+            <article class="mjks-dignity__faq-item"><button class="mjks-dignity__faq-button" type="button" aria-expanded="false" aria-controls="faq-a1"><span>How is food served and what kind of food is provided?</span><span class="mjks-dignity__faq-icon" aria-hidden="true"></span></button><div class="mjks-dignity__faq-answer" id="faq-a1"><div><p>Freshly cooked, nourishing meals are served by the shelter team and volunteers in a safe, respectful setting.</p></div></div></article>
+            <article class="mjks-dignity__faq-item"><button class="mjks-dignity__faq-button" type="button" aria-expanded="false" aria-controls="faq-a2"><span>Where is the shelter located?</span><span class="mjks-dignity__faq-icon" aria-hidden="true"></span></button><div class="mjks-dignity__faq-answer" id="faq-a2"><div><p>Please contact the foundation team for the current shelter location and visit guidance.</p></div></div></article>
+            <article class="mjks-dignity__faq-item"><button class="mjks-dignity__faq-button" type="button" aria-expanded="false" aria-controls="faq-a3"><span>Can I sponsor monthly?</span><span class="mjks-dignity__faq-icon" aria-hidden="true"></span></button><div class="mjks-dignity__faq-answer" id="faq-a3"><div><p>Yes. The foundation team can help you arrange recurring support for meals, beds or complete Night Passes.</p></div></div></article>
+          </div>
+          <div>
+            <article class="mjks-dignity__faq-item"><button class="mjks-dignity__faq-button" type="button" aria-expanded="false" aria-controls="faq-a4"><span>Will I get an 80G certificate for my donation?</span><span class="mjks-dignity__faq-icon" aria-hidden="true"></span></button><div class="mjks-dignity__faq-answer" id="faq-a4"><div><p>Contact the foundation with your donation details to confirm current 80G eligibility and receipt requirements.</p></div></div></article>
+            <article class="mjks-dignity__faq-item"><button class="mjks-dignity__faq-button" type="button" aria-expanded="false" aria-controls="faq-a5"><span>How do you verify the people who receive support?</span><span class="mjks-dignity__faq-icon" aria-hidden="true"></span></button><div class="mjks-dignity__faq-answer" id="faq-a5"><div><p>The field team records outreach, shelter entry and service delivery while respecting each personâ€™s privacy and dignity.</p></div></div></article>
+            <article class="mjks-dignity__faq-item"><button class="mjks-dignity__faq-button" type="button" aria-expanded="false" aria-controls="faq-a6"><span>Can I volunteer or visit the shelter?</span><span class="mjks-dignity__faq-icon" aria-hidden="true"></span></button><div class="mjks-dignity__faq-answer" id="faq-a6"><div><p>Yes. Visits and volunteering can be coordinated with the foundation team based on current needs and availability.</p></div></div></article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script>
+    document.querySelectorAll('.mjks-dignity__faq-button').forEach(function(button){
+      button.addEventListener('click',function(){
+        button.setAttribute('aria-expanded',String(button.getAttribute('aria-expanded')!=='true'));
+      });
+    });
+  </script>
+  <script>
+    (() => {
+      const svgChevron = direction => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${direction === 'prev' ? 'M15 18l-6-6 6-6' : 'M9 6l6 6-6 6'}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+      function addCarouselControls(section, track, label) {
+        if (!section || !track || section.querySelector(`[data-carousel-prev="${track.id}"]`)) return;
+        const heading = section.querySelector('.mjks-dignity__heading');
+        if (!heading) return;
+        const bar = document.createElement('div');
+        bar.className = 'mjks-dignity__carousel-bar';
+        heading.before(bar);
+        bar.append(heading);
+        const controls = document.createElement('div');
+        controls.className = 'mjks-dignity__carousel-controls';
+        controls.setAttribute('aria-label', `${label} carousel controls`);
+        controls.innerHTML = `<button class="mjks-dignity__carousel-button" type="button" data-carousel-prev="${track.id}" aria-label="Previous ${label}">${svgChevron('prev')}</button><button class="mjks-dignity__carousel-button" type="button" data-carousel-next="${track.id}" aria-label="Next ${label}">${svgChevron('next')}</button>`;
+        bar.append(controls);
+      }
+
+      function setupCarousel(track) {
+        if (!track) return;
+        const previous = document.querySelector(`[data-carousel-prev="${track.id}"]`);
+        const next = document.querySelector(`[data-carousel-next="${track.id}"]`);
+        if (!previous || !next) return;
+        const update = () => {
+          const max = Math.max(0, track.scrollWidth - track.clientWidth);
+          previous.disabled = track.scrollLeft <= 2;
+          next.disabled = track.scrollLeft >= max - 2;
+        };
+        const move = direction => {
+          const item = track.firstElementChild;
+          const gap = parseFloat(getComputedStyle(track).gap) || 16;
+          const step = item ? item.getBoundingClientRect().width + gap : track.clientWidth * .85;
+          track.scrollBy({ left: direction * step, behavior: 'smooth' });
+        };
+        previous.addEventListener('click', () => move(-1));
+        next.addEventListener('click', () => move(1));
+        track.addEventListener('scroll', update, { passive: true });
+        track.addEventListener('keydown', event => {
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            move(event.key === 'ArrowLeft' ? -1 : 1);
+          }
+        });
+        window.addEventListener('resize', update);
+        requestAnimationFrame(update);
+      }
+
+      function enhanceSupporters() {
+        const track = document.querySelector('.mjks-dignity__supporters');
+        if (!track) return;
+        track.id = 'supporters-track';
+        track.tabIndex = 0;
+        track.setAttribute('aria-label', 'Recent supporters');
+        const template = track.querySelector('.mjks-dignity__supporter');
+        const donors = [
+          ['AM', 'Arjun Mehta', 'â‚¹900', '4 days ago', 'Glad to help make one more night safer.'],
+          ['PV', 'Pooja Verma', 'â‚¹1,500', '5 days ago', 'Warm meals and safe beds matter.'],
+          ['NJ', 'Neha Joshi', 'â‚¹800', '6 days ago', 'Supporting care with dignity.'],
+          ['AK', 'Aman Khan', 'â‚¹2,100', '1 week ago', 'Every person deserves a safe place.'],
+          ['KR', 'Kavita Rao', 'â‚¹600', '1 week ago', 'Small support, meaningful change.']
+        ];
+        donors.forEach(([initials, name, amount, time, quote]) => {
+          if (!template) return;
+          const card = template.cloneNode(true);
+          const avatar = card.querySelector('.mjks-dignity__supporter-avatar, .mjks-dignity__avatar, span');
+          const strong = card.querySelector('strong');
+          const bold = card.querySelector('b');
+          const small = card.querySelector('small');
+          const paragraph = card.querySelector('p');
+          if (avatar) avatar.textContent = initials;
+          if (strong) strong.textContent = name;
+          if (bold) bold.textContent = amount;
+          if (small) small.textContent = time;
+          if (paragraph) paragraph.textContent = quote;
+          track.append(card);
+        });
+        if (!track.parentElement.classList.contains('mjks-dignity__supporters-viewport')) {
+          const viewport = document.createElement('div');
+          viewport.className = 'mjks-dignity__supporters-viewport';
+          track.before(viewport);
+          viewport.append(track);
+        }
+        const section = track.closest('.mjks-dignity__section');
+        addCarouselControls(section, track, 'supporters');
+        setupCarousel(track);
+      }
+
+      function addGallery() {
+        const faqTitle = document.getElementById('faq-title');
+        const faq = faqTitle?.closest('.mjks-dignity__section');
+        if (!faq || document.getElementById('gallery-title')) return;
+        const base = '../../../assets/dignity-night/';
+        const items = [
+          ['timeline-outreach.webp', 'Outreach response', 'An outreach volunteer answering a call for help'],
+          ['timeline-hot-meal.webp', 'A warm meal served', 'A shelter guest receiving a freshly cooked meal'],
+          ['timeline-shelter-checkin.webp', 'Beds prepared for the night', 'Clean shelter beds ready for guests'],
+          ['timeline-breakfast-followup.webp', 'Morning follow-up', 'Volunteers supporting a family over breakfast'],
+          ['log-rescue.webp', 'Rescue and pick-up', 'Shelter team assisting people near a railway station'],
+          ['log-dinner.webp', 'Dinner service', 'Volunteers serving dinner at the shelter'],
+          ['log-checkin.webp', 'Shelter check-in', 'A safe sleeping area prepared for the night'],
+          ['log-morning.webp', 'Morning tea and breakfast', 'Guests sharing breakfast with the shelter team']
+        ];
+        const section = document.createElement('section');
+        section.className = 'mjks-dignity__section mjks-dignity__gallery';
+        section.setAttribute('aria-labelledby', 'gallery-title');
+        section.innerHTML = `<div class="mjks-dignity__heading"><span class="mjks-dignity__spark" aria-hidden="true">âœ§</span><h2 id="gallery-title">Gallery from the shelter</h2><span class="mjks-dignity__rule" aria-hidden="true"></span></div><p class="mjks-dignity__sub">Moments of care, comfort and community from recent shelter nights.</p><div class="mjks-dignity__gallery-viewport"><div class="mjks-dignity__gallery-track" id="gallery-track" tabindex="0" aria-label="Shelter gallery">${items.map(([src, caption, alt]) => `<article class="mjks-dignity__gallery-card"><figure><img src="${base}${src}" alt="${alt}" loading="lazy"><figcaption>${caption}</figcaption></figure></article>`).join('')}</div></div>`;
+        faq.before(section);
+        const track = section.querySelector('#gallery-track');
+        addCarouselControls(section, track, 'gallery');
+        setupCarousel(track);
+      }
+
+      function addShareSection() {
+        const faq = document.getElementById('faq-title')?.closest('.mjks-dignity__section');
+        if (!faq || document.getElementById('share-title')) return;
+        const section = document.createElement('section');
+        section.className = 'mjks-dignity__section mjks-dignity__share';
+        section.setAttribute('aria-labelledby', 'share-title');
+        section.innerHTML = `<div class="mjks-dignity__share-card"><div><h2 id="share-title">Share this story</h2><p>Help more people discover the Dignity Night Pass and support a safe night for someone in need.</p></div><div class="mjks-dignity__share-actions" aria-label="Share this campaign"><a class="mjks-dignity__share-link" href="#" data-share="x" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H22l-8.3 9.5L23.5 22h-7.7l-6-7.9L2.9 22H-1l9-10.3L-1.4 2h7.9l5.4 7.2L18.2 2Zm-1.3 18h2.1L5.3 3.9H3.1L16.9 20Z"/></svg><span>X</span></a><a class="mjks-dignity__share-link" href="#" data-share="facebook" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8H17V2.4c-.8-.1-1.7-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.4v2.9H7.5V13h2.8v9h3.2Z"/></svg><span>Facebook</span></a><a class="mjks-dignity__share-link" href="#" data-share="linkedin" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 7.8H2V22h3.3V7.8ZM3.7 2A1.9 1.9 0 1 0 3.7 5.8 1.9 1.9 0 0 0 3.7 2ZM22 13.8c0-4.3-2.3-6.3-5.4-6.3-2.5 0-3.6 1.4-4.2 2.3v-2H9.1V22h3.3v-7c0-1.8.4-3.6 2.7-3.6 2.3 0 2.3 2.1 2.3 3.7V22H22v-8.2Z"/></svg><span>LinkedIn</span></a><a class="mjks-dignity__share-link" href="#" data-share="whatsapp" aria-label="Share on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.3 23.5l6-1.6A11.7 11.7 0 0 0 12 23.4h.1A11.8 11.8 0 0 0 20.5 3.5ZM12 21.4c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.5.9.9-3.4-.2-.4a9.7 9.7 0 1 1 8.2 4.5Zm5.3-7.3c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2l-1 1.2c-.2.3-.4.3-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 3s1.3 3.5 1.5 3.7c.2.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg><span>WhatsApp</span></a><button class="mjks-dignity__share-link" type="button" data-share="native" aria-label="Open device share menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16c-.8 0-1.5.3-2 .8L8.9 12.7c.1-.5.1-.9 0-1.4L16 7.2A3 3 0 1 0 15 5c0 .2 0 .5.1.7L8 9.8A3 3 0 1 0 8 14.2l7.1 4.1A3 3 0 1 0 18 16Z"/></svg><span>Share</span></button><button class="mjks-dignity__share-link" type="button" data-share="copy" aria-label="Copy page link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 0 1.4 1.4l4.2-4.2a3 3 0 0 0-4.2-4.2L9.6 8.8a1 1 0 1 0 1.4 1.4l2.4-2.4a1 1 0 0 1 1.4 1.4l-4.2 4.2Zm2.8-2.8a1 1 0 0 0-1.4-1.4l-4.2 4.2a3 3 0 0 0 4.2 4.2l2.4-2.4a1 1 0 0 0-1.4-1.4l-2.4 2.4a1 1 0 0 1-1.4-1.4l4.2-4.2Z"/></svg><span>Copy link</span></button></div><p class="mjks-dignity__share-status" aria-live="polite"></p></div>`;
+        faq.after(section);
+        const status = section.querySelector('.mjks-dignity__share-status');
+        const url = location.href;
+        const title = 'Dignity Night Pass â€” Manav Janhit Kalyan Foundation';
+        const copyLink = async () => {
+          try {
+            await navigator.clipboard.writeText(url);
+          } catch (_) {
+            const input = document.createElement('textarea');
+            input.value = url;
+            input.style.position = 'fixed';
+            input.style.opacity = '0';
+            document.body.append(input);
+            input.select();
+            document.execCommand('copy');
+            input.remove();
+          }
+          status.textContent = 'Link copied to your clipboard.';
+        };
+        section.querySelectorAll('[data-share]').forEach(control => control.addEventListener('click', async event => {
+          event.preventDefault();
+          const type = control.dataset.share;
+          if (type === 'copy') return copyLink();
+          if (type === 'native') {
+            if (navigator.share) {
+              try { await navigator.share({ title, url }); status.textContent = 'Thanks for sharing.'; } catch (_) {}
+            } else await copyLink();
+            return;
+          }
+          const links = {
+            x: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+            facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+            linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+            whatsapp: `https://wa.me/?text=${encodeURIComponent(`${title} ${url}`)}`
+          };
+          window.open(links[type], '_blank', 'noopener,noreferrer,width=720,height=640');
+        }));
+      }
+
+      function setupLightbox() {
+        const triggers = [...document.querySelectorAll('[data-lightbox-src]')];
+        if (!triggers.length) return;
+        const lightbox = document.createElement('div');
+        lightbox.className = 'mjks-dignity__lightbox';
+        lightbox.hidden = true;
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.innerHTML = `<div class="mjks-dignity__lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="proof-lightbox-caption"><button class="mjks-dignity__lightbox-close" type="button" aria-label="Close document preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><img class="mjks-dignity__lightbox-image" alt=""><p class="mjks-dignity__lightbox-caption" id="proof-lightbox-caption"></p></div>`;
+        document.body.append(lightbox);
+        const image = lightbox.querySelector('.mjks-dignity__lightbox-image');
+        const caption = lightbox.querySelector('.mjks-dignity__lightbox-caption');
+        const closeButton = lightbox.querySelector('.mjks-dignity__lightbox-close');
+        let lastFocus;
+        const close = () => {
+          lightbox.hidden = true;
+          lightbox.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('mjks-dignity--lightbox-open');
+          lastFocus?.focus();
+        };
+        triggers.forEach(trigger => trigger.addEventListener('click', () => {
+          lastFocus = trigger;
+          image.src = trigger.dataset.lightboxSrc;
+          image.alt = trigger.querySelector('img')?.alt || 'Verified shelter document';
+          caption.textContent = trigger.dataset.lightboxCaption || image.alt;
+          lightbox.hidden = false;
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('mjks-dignity--lightbox-open');
+          closeButton.focus();
+        }));
+        closeButton.addEventListener('click', close);
+        lightbox.addEventListener('click', event => { if (event.target === lightbox) close(); });
+        document.addEventListener('keydown', event => { if (event.key === 'Escape' && !lightbox.hidden) close(); });
+      }
+
+      function initEnhancements() {
+        enhanceSupporters();
+        addGallery();
+        addShareSection();
+        setupLightbox();
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initEnhancements);
+      else initEnhancements();
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+

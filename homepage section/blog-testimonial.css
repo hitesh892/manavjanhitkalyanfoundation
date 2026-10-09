@@ -490,6 +490,10 @@
   transition: transform 0.35s ease;
 }
 
+.mjks-blogs__featured-image img {
+  object-position: center 24%;
+}
+
 .mjks-blogs__featured:hover .mjks-blogs__featured-image img,
 .mjks-blogs__side-card:hover .mjks-blogs__side-image img {
   transform: scale(1.035);

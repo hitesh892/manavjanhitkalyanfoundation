@@ -4,7 +4,10 @@
    Consolidated from the original file; original preserved.
    ========================================================== */
 
+ /* Legacy five-card video initializer disabled.
+    The restored 73-video gallery is initialized by script/video-gallery.js. */
  (() => {
+      if (document.querySelector('script[src="script/video-gallery.js"]')) return;
       const track = document.querySelector('.track');
       if (!track) return;
       const cards = [...track.children];

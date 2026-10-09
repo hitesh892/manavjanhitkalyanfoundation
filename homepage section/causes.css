@@ -700,6 +700,217 @@ body {
   }
 }
 
+/* Final approved cause-card action row.
+   Kept at the end with matching specificity so the consolidated homepage
+   stylesheet cannot override the preserved component design. */
+html body .mjks-cause-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-width: 0;
+  gap: 10px;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+html body .mjks-cause-card__donate {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 1 50%;
+  width: 50%;
+  max-width: 50%;
+  min-width: 0;
+  height: 56px;
+  min-height: 56px;
+  padding: 6px 0 6px 10px;
+  gap: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f87566, #e95645 55%, #d94738);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+html body .mjks-cause-card__donate::before { display: none; }
+
+html body .mjks-cause-card__donate-icon {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: none;
+  transform: none;
+}
+
+html body .mjks-cause-card__donate-icon img {
+  position: static !important;
+  inset: auto !important;
+  display: block;
+  flex: 0 0 19px;
+  width: 19px !important;
+  height: 19px !important;
+  min-width: 19px !important;
+  min-height: 19px !important;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(18%) saturate(879%) hue-rotate(101deg) brightness(91%) contrast(87%) !important;
+  transform: none !important;
+}
+
+html body .mjks-cause-card__donate-icon .mjks-cause-card__heart {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #315f4b;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+html body .mjks-cause-card__donate-label {
+  min-width: 0;
+  overflow: hidden;
+  color: #fff;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html body .mjks-cause-card__socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 50%;
+  width: 50%;
+  min-width: 0;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+html body .mjks-cause-card__socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 50%;
+}
+
+html body .mjks-cause-card__socials img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1023px) {
+  html body .mjks-cause-card__actions { gap: 6px; }
+  html body .mjks-cause-card__donate {
+    height: 52px;
+    min-height: 52px;
+    padding: 5px 7px;
+    gap: 7px;
+  }
+  html body .mjks-cause-card__donate-icon {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+  html body .mjks-cause-card__donate-icon img {
+    width: 17px !important;
+    height: 17px !important;
+    min-width: 17px !important;
+    min-height: 17px !important;
+  }
+  html body .mjks-cause-card__donate-icon .mjks-cause-card__heart {
+    width: 18px;
+    height: 18px;
+  }
+  html body .mjks-cause-card__donate-label { font-size: 11px; }
+  html body .mjks-cause-card__socials { gap: 5px; }
+  html body .mjks-cause-card__socials a {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+  html body .mjks-cause-card__socials img { width: 22px; height: 22px; }
+}
+
+@media (max-width: 767px) {
+  html body .mjks-cause-card__actions { gap: 5px; }
+  html body .mjks-cause-card__donate {
+    height: 48px;
+    min-height: 48px;
+    padding: 5px 6px;
+    gap: 6px;
+  }
+  html body .mjks-cause-card__donate-icon {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+  html body .mjks-cause-card__donate-icon img {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+  }
+  html body .mjks-cause-card__donate-icon .mjks-cause-card__heart {
+    width: 17px;
+    height: 17px;
+  }
+  html body .mjks-cause-card__donate-label { font-size: 13px; }
+  html body .mjks-cause-card__socials { gap: 4px; }
+  html body .mjks-cause-card__socials a {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+  html body .mjks-cause-card__socials img { width: 20px; height: 20px; }
+}
+
+@media (max-width: 359px) {
+  html body .mjks-cause-card__donate { gap: 4px; padding-inline: 5px; }
+  html body .mjks-cause-card__donate-label { font-size: 12px; }
+  html body .mjks-cause-card__socials { gap: 3px; }
+  html body .mjks-cause-card__socials a {
+    flex-basis: 29px;
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    min-height: 29px;
+  }
+  html body .mjks-cause-card__socials img { width: 18px; height: 18px; }
+}
+
 /* Strict campaign-card action row: real in-flow icon, flexible donate CTA,
    fixed social group, and no wrapping at any breakpoint. */
 .mjks-cause-card__actions {

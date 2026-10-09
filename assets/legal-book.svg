@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 270" role="img" aria-labelledby="title desc">
+  <title id="title">Open book and protection shield</title>
+  <desc id="desc">An open legal information book with a green check shield.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#a8dfff"/><stop offset=".52" stop-color="#5eaef0"/><stop offset="1" stop-color="#246dca"/></linearGradient>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e9f2ff"/></linearGradient>
+    <linearGradient id="shield" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#29e5a6"/><stop offset="1" stop-color="#049b74"/></linearGradient>
+    <filter id="shadow" x="-40%" y="-50%" width="180%" height="210%"><feGaussianBlur stdDeviation="11"/></filter>
+    <filter id="lift" x="-30%" y="-40%" width="160%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#447ab8" flood-opacity=".25"/></filter>
+  </defs>
+  <ellipse cx="204" cy="230" rx="146" ry="21" fill="#367dc4" opacity=".18" filter="url(#shadow)"/>
+  <g filter="url(#lift)">
+    <path d="M42 72c44-8 99-3 161 22 68-26 122-29 177-21v139c-57-8-114 0-177 25-61-25-117-33-161-25z" fill="#3e9beb" stroke="#2373cd" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M53 57c51-8 101 0 150 25v135c-44-22-99-31-150-24z" fill="#bce3ff" stroke="#77bff3" stroke-width="2"/>
+    <path d="M203 82c50-25 105-33 166-25v136c-59-7-112 1-166 24z" fill="#a9dbff" stroke="#77bff3" stroke-width="2"/>
+    <path d="M62 46c52-5 99 5 141 31v131c-44-22-88-31-141-24z" fill="url(#paper)" stroke="#b8d6f5" stroke-width="2"/>
+    <path d="M203 77c50-24 100-37 157-31v138c-57-5-107 4-157 24z" fill="url(#paper)" stroke="#b8d6f5" stroke-width="2"/>
+    <path d="M203 77v132" stroke="#7fb9ea" stroke-width="3"/>
+    <g fill="none" stroke="#66b9fb" stroke-width="5" stroke-linecap="round" opacity=".9">
+      <path d="M83 88c25 3 53 10 83 24M83 109c25 3 53 10 83 24M83 130c25 3 53 10 83 24M83 151c25 3 53 10 83 24"/>
+      <path d="M234 112c30-15 61-23 95-25M234 133c30-15 61-23 95-25M234 154c30-15 61-23 95-25"/>
+    </g>
+  </g>
+  <g filter="url(#lift)">
+    <path d="M314 142c24-2 40-13 51-20 11 7 27 18 51 20v43c0 34-20 53-51 67-31-14-51-33-51-67z" fill="url(#shield)" stroke="#baffea" stroke-width="5" stroke-linejoin="round"/>
+    <path d="m340 186 17 16 34-39" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

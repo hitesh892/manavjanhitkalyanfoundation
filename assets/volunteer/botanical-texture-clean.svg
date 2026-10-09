@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="coral" cx="18%" cy="8%" r="38%">
+      <stop offset="0" stop-color="#ffdcd4" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#fff4f0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sage" cx="90%" cy="12%" r="42%">
+      <stop offset="0" stop-color="#d9e8d2" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#f4faf1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#coral)"/>
+  <rect width="1920" height="1080" fill="url(#sage)"/>
+  <g fill="none" stroke="#6f8c73" stroke-linecap="round" stroke-linejoin="round" opacity=".24">
+    <path d="M-20 318C108 268 205 164 254 28"/>
+    <path d="M76 278C31 256 17 210 34 170C79 189 96 233 76 278Z" fill="#d9e8d2" opacity=".46"/>
+    <path d="M145 215C111 176 118 126 160 95C184 142 177 184 145 215Z" fill="#d9e8d2" opacity=".4"/>
+    <path d="M207 132C185 91 201 51 244 30C255 76 241 111 207 132Z" fill="#ffdcd4" opacity=".42"/>
+    <path d="M1701 1083C1780 995 1830 884 1854 744"/>
+    <path d="M1742 1025C1691 1002 1672 956 1690 911C1739 929 1758 976 1742 1025Z" fill="#d9e8d2" opacity=".42"/>
+    <path d="M1794 936C1760 896 1768 846 1812 816C1835 863 1827 905 1794 936Z" fill="#ffdcd4" opacity=".35"/>
+  </g>
+  <g fill="none" stroke="#e95645" stroke-linecap="round" opacity=".17">
+    <path d="M1320 240C1435 212 1530 152 1608 64"/>
+    <path d="M1607 64C1591 91 1588 116 1597 140"/>
+  </g>
+</svg>
